@@ -35,6 +35,18 @@ function disable(){
     document.querySelector('.container').addEventListener('mousedown', preventScroll, {passive: false}); // Update by me to prevent moushe middle click scrolling down
     document.querySelector('.container').addEventListener('mouseup', preventScroll, {passive: false}); // Update by me to prevent moushe middle click scrolling up
     document.querySelector('.container').addEventListener('touchmove', preventScroll, {passive: false}); // Update by me to prevent touch scrolling on mobile devices
+    document.querySelector('.container').addEventListener(    
+        "keydown",
+        (e) => {
+          if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(
+              e.code
+            )
+          ) {
+            e.preventDefault();
+          }
+        },
+        false
+      );
 }
 
 function enable(){
@@ -45,3 +57,15 @@ function enable(){
 }
 
     
+window.addEventListener(
+    "keydown",
+    (e) => {
+      if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(
+          e.code
+        )
+      ) {
+        e.preventDefault();
+      }
+    },
+    false
+  );
