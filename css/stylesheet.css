@@ -1,521 +1,82 @@
-@charset "UTF-8";
-/* LOGO COLORS */
-/* LOGO COLORS - OPACITY TITLE COLORS */
-/* LOGO COLORS - OPACITY HOVER COLORS */
-/* This file contains:
-    > @font-face
-    > font related @mixins
+/*
+Error: Invalid CSS after "    display": expected ";", was ": flex;"
+        on line 31 of scss/_layout.scss
+        from line 5 of scss/main.scss
+
+26: 
+27: .hero_section {
+28:     
+29:     height: calc(100vh - #{$nav-height});
+30:     min-height: -webkit-fill-available
+31:     display: flex;
+32:     flex-direction: column;
+33:     
+34:     scroll-snap-align: start;
+35:     scroll-snap-stop: always;
+36: 
+
+Backtrace:
+scss/_layout.scss:31
+scss/main.scss:5
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1233:in `tok!'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:815:in `block in try_declaration'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1284:in `rethrow'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:820:in `try_declaration'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:743:in `declaration_or_ruleset'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:681:in `ruleset'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/engine.rb:321:in `to_tree'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:323:in `block in visit_import'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/stack.rb:88:in `block in with_import'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/stack.rb:88:in `with_import'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+D:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
 */
-@font-face {
-  font-family: 'arimoregular';
-  src: url("../fonts/Arimo Regular/arimo-regular-webfont.woff2") format("woff2"), url("../fonts/Arimo Regular/arimo-regular-webfont.woff") format("woff"), url("../fonts/Arimo Regular/arimo-regular-webfont.ttf") format("truetype"), url("../fonts/Arimo Regular/arimo-regular-webfont.svg#arimoregular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
-  font-family: 'arimobold';
-  src: url("../fonts/Arimo Bold/arimo-bold-webfont.woff2") format("woff2"), url("../fonts/Arimo Bold/arimo-bold-webfont.woff") format("woff"), url("../fonts/Arimo Bold/arimo-bold-webfont.ttf") format("truetype"), url("../fonts/Arimo Bold/arimo-bold-webfont.svg#arimobold") format("svg");
-  font-weight: bold;
-  font-style: normal; }
-@font-face {
-  font-family: 'andadabold';
-  src: url("../fonts/Andada Bold/andada-bold-webfont.woff2") format("woff2"), url("../fonts/Andada Bold/andada-bold-webfont.woff") format("woff"), url("../fonts/Andada Bold/andada-bold-webfont.ttf") format("truetype"), url("../fonts/Andada Bold/andada-bold-webfont.svg#andadabold") format("svg");
-  font-weight: bold;
-  font-style: normal; }
-@font-face {
-  font-family: 'andadaregular';
-  src: url("../fonts/Andada Regular/andada-regular-webfont.woff2") format("woff2"), url("../fonts/Andada Regular/andada-regular-webfont.woff") format("woff"), url("../fonts/Andada Regular/andada-regular-webfont.ttf") format("truetype"), url("../fonts/Andada Regular/andada-regular-webfont.svg#andadaregular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-body {
-  font-family: 'arimoregular'; }
-
-p {
-  font-family: 'arimoregular'; }
-
-.wrapper_header {
-  position: absolute;
-  width: 100%;
-  z-index: 120;
-  top: 0; }
-
-header {
-  width: 100%;
-  height: 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  z-index: initial;
-  background: white;
-  top: 0; }
-  header .logo {
-    width: 150px;
-    margin-left: 20px; }
-    header .logo a img {
-      display: block; }
-  header .nav_button {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    width: 30px;
-    position: relative;
-    cursor: pointer;
-    margin-right: 20px; }
-    header .nav_button .nav_button__burger {
-      width: 30px;
-      height: 4px;
-      background: #19336d;
-      transition: all .5s ease-in-out; }
-    header .nav_button .nav_button__burger::before,
-    header .nav_button .nav_button__burger::after {
-      content: "";
-      width: 30px;
-      height: 4px;
-      background: #19336d;
-      position: absolute;
-      transition: all .5s ease-in-out; }
-    header .nav_button .nav_button__burger::before {
-      transform: translateY(-10px);
-      width: 20px; }
-    header .nav_button .nav_button__burger::after {
-      transform: translateY(10px); }
-  header .nav {
-    transform: translateY(-100%);
-    position: absolute;
-    offset-anchor: top right;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background: #13313d;
-    height: calc(100vh - 60px);
-    max-height: 600px;
-    top: 0;
-    transition: all 0.5s ease-in-out;
-    z-index: -1; }
-    header .nav .navigation {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      list-style: none;
-      z-index: -2;
-      margin: 20px 30px; }
-      header .nav .navigation:nth-child(1) {
-        margin-top: 10px; }
-      header .nav .navigation li {
-        margin-top: 20px; }
-        header .nav .navigation li a {
-          font-size: 18px;
-          line-height: 27px;
-          font-weight: 400;
-          letter-spacing: 0.09px;
-          color: #19336d;
-          text-decoration: none;
-          color: white;
-          margin-top: 30px;
-          margin-left: 20px; }
-      header .nav .navigation .cta_button {
-        margin-top: calc(30px + 10px); }
-        header .nav .navigation .cta_button a {
-          padding: 20px;
-          padding-right: 100px;
-          background: #f4b740;
-          margin-left: calc(20px - 20px);
-          color: #19336d;
-          font-size: 20px;
-          line-height: 30px;
-          font-weight: 700;
-          letter-spacing: 0.1px;
-          color: #19336d; }
-    header .nav .nav__social {
-      height: auto;
-      width: 200px;
-      display: flex;
-      justify-content: space-between;
-      margin: 40px auto; }
-      header .nav .nav__social svg {
-        display: block;
-        width: 80px;
-        fill: white; }
-
-.nav_button.open .nav_button__burger {
-  transform: translateX(-50px);
-  background: transparent; }
-
-.nav_button.open .nav_button__burger::before {
-  transform: rotate(45deg) translate(35px, -35px);
-  width: 30px; }
-
-.nav_button.open .nav_button__burger::after {
-  transform: rotate(-45deg) translate(35px, 35px); }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
-
-body {
-  overflow: hidden; }
-
-.container {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  height: calc(100vh - 60px);
-  width: 100%;
-  position: relative;
-  margin-top: 60px; }
-
-.wrapper {
-  position: relative;
-  z-index: 10; }
-
-.hero_section {
-  height: calc(100vh - 60px);
-  display: flex;
-  flex-direction: column;
-  scroll-snap-align: start;
-  scroll-snap-stop: always; }
-  .hero_section__text_area {
-    margin: 20px 20px 10px 20px; }
-    .hero_section__text_area h1 span::after {
-      content: "\a";
-      /* breaks line after "Jednoduše," word */ }
-  .hero_section__image_area {
-    width: 100%;
-    flex-grow: 2;
-    background-size: cover;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around; }
-    .hero_section__image_area__mockups_box {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      background: yellow;
-      width: 100%; }
-      .hero_section__image_area__mockups_box__macbook {
-        height: auto;
-        max-height: 600px;
-        width: 100%;
-        display: flex;
-        justify-content: center; }
-        .hero_section__image_area__mockups_box__macbook img {
-          width: auto;
-          max-width: 100%;
-          object-fit: contain; }
-    .hero_section__image_area__badges_box {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 0px auto;
-      width: 90%;
-      max-width: 510px;
-      max-height: 10vh; }
-      .hero_section__image_area__badges_box a {
-        width: 45%;
-        max-width: 230px; }
-        .hero_section__image_area__badges_box a img {
-          width: 100%;
-          height: 100%;
-          display: block;
-          padding: 0 5px;
-          border-radius: 5px;
-          background: black; }
-
-.dochazka_section__page_01, .dochazka_section__page_02, .dochazka_section__page_03, .HR_section__page_01, .HR_section__page_02, .HR_section__page_03, .Rezervace_section__page_01, .Rezervace_section__page_02, .Rezervace_section__page_03, .Operacni_section__page_01, .Operacni_section__page_02, .Operacni_section__page_03,
-.Marketing_section__page_01,
-.Marketing_section__page_02,
-.Marketing_section__page_03, .Napiste_section__page_01, .Napiste_section__page_02, .Napiste_section__page_03 {
-  height: calc(100vh - 60px);
-  scroll-snap-align: start;
-  scroll-snap-stop: always; }
-  .dochazka_section__page_01__flexbox, .dochazka_section__page_02__flexbox, .dochazka_section__page_03__flexbox, .HR_section__page_01__flexbox, .HR_section__page_02__flexbox, .HR_section__page_03__flexbox, .Rezervace_section__page_01__flexbox, .Rezervace_section__page_02__flexbox, .Rezervace_section__page_03__flexbox, .Operacni_section__page_01__flexbox, .Operacni_section__page_02__flexbox, .Operacni_section__page_03__flexbox,
-  .Marketing_section__page_01__flexbox,
-  .Marketing_section__page_02__flexbox,
-  .Marketing_section__page_03__flexbox, .Napiste_section__page_01__flexbox, .Napiste_section__page_02__flexbox, .Napiste_section__page_03__flexbox {
-    display: flex;
-    flex-direction: column;
-    width: 100wv; }
-    .dochazka_section__page_01__flexbox__text_area, .dochazka_section__page_02__flexbox__text_area, .dochazka_section__page_03__flexbox__text_area, .HR_section__page_01__flexbox__text_area, .HR_section__page_02__flexbox__text_area, .HR_section__page_03__flexbox__text_area, .Rezervace_section__page_01__flexbox__text_area, .Rezervace_section__page_02__flexbox__text_area, .Rezervace_section__page_03__flexbox__text_area, .Operacni_section__page_01__flexbox__text_area, .Operacni_section__page_02__flexbox__text_area, .Operacni_section__page_03__flexbox__text_area,
-    .Marketing_section__page_01__flexbox__text_area,
-    .Marketing_section__page_02__flexbox__text_area,
-    .Marketing_section__page_03__flexbox__text_area, .Napiste_section__page_01__flexbox__text_area, .Napiste_section__page_02__flexbox__text_area, .Napiste_section__page_03__flexbox__text_area {
-      margin: 50px 20px 10px 20px;
-      display: flex;
-      flex-direction: column; }
-      .dochazka_section__page_01__flexbox__text_area h3, .dochazka_section__page_02__flexbox__text_area h3, .dochazka_section__page_03__flexbox__text_area h3, .HR_section__page_01__flexbox__text_area h3, .HR_section__page_02__flexbox__text_area h3, .HR_section__page_03__flexbox__text_area h3, .Rezervace_section__page_01__flexbox__text_area h3, .Rezervace_section__page_02__flexbox__text_area h3, .Rezervace_section__page_03__flexbox__text_area h3, .Operacni_section__page_01__flexbox__text_area h3, .Operacni_section__page_02__flexbox__text_area h3, .Operacni_section__page_03__flexbox__text_area h3,
-      .Marketing_section__page_01__flexbox__text_area h3,
-      .Marketing_section__page_02__flexbox__text_area h3,
-      .Marketing_section__page_03__flexbox__text_area h3, .Napiste_section__page_01__flexbox__text_area h3, .Napiste_section__page_02__flexbox__text_area h3, .Napiste_section__page_03__flexbox__text_area h3 {
-        font-family: 'andadaregular';
-        font-size: 24px;
-        line-height: 36px;
-        font-weight: 400;
-        letter-spacing: 0.48px;
-        color: #19336d; }
-        .dochazka_section__page_01__flexbox__text_area h3:first-letter, .dochazka_section__page_02__flexbox__text_area h3:first-letter, .dochazka_section__page_03__flexbox__text_area h3:first-letter, .HR_section__page_01__flexbox__text_area h3:first-letter, .HR_section__page_02__flexbox__text_area h3:first-letter, .HR_section__page_03__flexbox__text_area h3:first-letter, .Rezervace_section__page_01__flexbox__text_area h3:first-letter, .Rezervace_section__page_02__flexbox__text_area h3:first-letter, .Rezervace_section__page_03__flexbox__text_area h3:first-letter, .Operacni_section__page_01__flexbox__text_area h3:first-letter, .Operacni_section__page_02__flexbox__text_area h3:first-letter, .Operacni_section__page_03__flexbox__text_area h3:first-letter,
-        .Marketing_section__page_01__flexbox__text_area h3:first-letter,
-        .Marketing_section__page_02__flexbox__text_area h3:first-letter,
-        .Marketing_section__page_03__flexbox__text_area h3:first-letter, .Napiste_section__page_01__flexbox__text_area h3:first-letter, .Napiste_section__page_02__flexbox__text_area h3:first-letter, .Napiste_section__page_03__flexbox__text_area h3:first-letter {
-          text-transform: uppercase; }
-      .dochazka_section__page_01__flexbox__text_area p, .dochazka_section__page_02__flexbox__text_area p, .dochazka_section__page_03__flexbox__text_area p, .HR_section__page_01__flexbox__text_area p, .HR_section__page_02__flexbox__text_area p, .HR_section__page_03__flexbox__text_area p, .Rezervace_section__page_01__flexbox__text_area p, .Rezervace_section__page_02__flexbox__text_area p, .Rezervace_section__page_03__flexbox__text_area p, .Operacni_section__page_01__flexbox__text_area p, .Operacni_section__page_02__flexbox__text_area p, .Operacni_section__page_03__flexbox__text_area p,
-      .Marketing_section__page_01__flexbox__text_area p,
-      .Marketing_section__page_02__flexbox__text_area p,
-      .Marketing_section__page_03__flexbox__text_area p, .Napiste_section__page_01__flexbox__text_area p, .Napiste_section__page_02__flexbox__text_area p, .Napiste_section__page_03__flexbox__text_area p {
-        margin-left: 10px;
-        margin-top: 10px; }
-    .dochazka_section__page_01__flexbox__image_area, .dochazka_section__page_02__flexbox__image_area, .dochazka_section__page_03__flexbox__image_area, .HR_section__page_01__flexbox__image_area, .HR_section__page_02__flexbox__image_area, .HR_section__page_03__flexbox__image_area, .Rezervace_section__page_01__flexbox__image_area, .Rezervace_section__page_02__flexbox__image_area, .Rezervace_section__page_03__flexbox__image_area, .Operacni_section__page_01__flexbox__image_area, .Operacni_section__page_02__flexbox__image_area, .Operacni_section__page_03__flexbox__image_area,
-    .Marketing_section__page_01__flexbox__image_area,
-    .Marketing_section__page_02__flexbox__image_area,
-    .Marketing_section__page_03__flexbox__image_area, .Napiste_section__page_01__flexbox__image_area, .Napiste_section__page_02__flexbox__image_area, .Napiste_section__page_03__flexbox__image_area {
-      width: 100%;
-      margin-top: 20px; }
-      .dochazka_section__page_01__flexbox__image_area img, .dochazka_section__page_02__flexbox__image_area img, .dochazka_section__page_03__flexbox__image_area img, .HR_section__page_01__flexbox__image_area img, .HR_section__page_02__flexbox__image_area img, .HR_section__page_03__flexbox__image_area img, .Rezervace_section__page_01__flexbox__image_area img, .Rezervace_section__page_02__flexbox__image_area img, .Rezervace_section__page_03__flexbox__image_area img, .Operacni_section__page_01__flexbox__image_area img, .Operacni_section__page_02__flexbox__image_area img, .Operacni_section__page_03__flexbox__image_area img,
-      .Marketing_section__page_01__flexbox__image_area img,
-      .Marketing_section__page_02__flexbox__image_area img,
-      .Marketing_section__page_03__flexbox__image_area img, .Napiste_section__page_01__flexbox__image_area img, .Napiste_section__page_02__flexbox__image_area img, .Napiste_section__page_03__flexbox__image_area img {
-        display: block;
-        width: 70%;
-        margin: auto; }
-    .dochazka_section__page_01__flexbox #image-area-mockup-mackbook, .dochazka_section__page_02__flexbox #image-area-mockup-mackbook, .dochazka_section__page_03__flexbox #image-area-mockup-mackbook, .HR_section__page_01__flexbox #image-area-mockup-mackbook, .HR_section__page_02__flexbox #image-area-mockup-mackbook, .HR_section__page_03__flexbox #image-area-mockup-mackbook, .Rezervace_section__page_01__flexbox #image-area-mockup-mackbook, .Rezervace_section__page_02__flexbox #image-area-mockup-mackbook, .Rezervace_section__page_03__flexbox #image-area-mockup-mackbook, .Operacni_section__page_01__flexbox #image-area-mockup-mackbook, .Operacni_section__page_02__flexbox #image-area-mockup-mackbook, .Operacni_section__page_03__flexbox #image-area-mockup-mackbook,
-    .Marketing_section__page_01__flexbox #image-area-mockup-mackbook,
-    .Marketing_section__page_02__flexbox #image-area-mockup-mackbook,
-    .Marketing_section__page_03__flexbox #image-area-mockup-mackbook, .Napiste_section__page_01__flexbox #image-area-mockup-mackbook, .Napiste_section__page_02__flexbox #image-area-mockup-mackbook, .Napiste_section__page_03__flexbox #image-area-mockup-mackbook {
-      width: 200%;
-      margin-top: 20px;
-      margin-left: -30%; }
-      .dochazka_section__page_01__flexbox #image-area-mockup-mackbook #mockup-mackbook, .dochazka_section__page_02__flexbox #image-area-mockup-mackbook #mockup-mackbook, .dochazka_section__page_03__flexbox #image-area-mockup-mackbook #mockup-mackbook, .HR_section__page_01__flexbox #image-area-mockup-mackbook #mockup-mackbook, .HR_section__page_02__flexbox #image-area-mockup-mackbook #mockup-mackbook, .HR_section__page_03__flexbox #image-area-mockup-mackbook #mockup-mackbook, .Rezervace_section__page_01__flexbox #image-area-mockup-mackbook #mockup-mackbook, .Rezervace_section__page_02__flexbox #image-area-mockup-mackbook #mockup-mackbook, .Rezervace_section__page_03__flexbox #image-area-mockup-mackbook #mockup-mackbook, .Operacni_section__page_01__flexbox #image-area-mockup-mackbook #mockup-mackbook, .Operacni_section__page_02__flexbox #image-area-mockup-mackbook #mockup-mackbook, .Operacni_section__page_03__flexbox #image-area-mockup-mackbook #mockup-mackbook,
-      .Marketing_section__page_01__flexbox #image-area-mockup-mackbook #mockup-mackbook,
-      .Marketing_section__page_02__flexbox #image-area-mockup-mackbook #mockup-mackbook,
-      .Marketing_section__page_03__flexbox #image-area-mockup-mackbook #mockup-mackbook, .Napiste_section__page_01__flexbox #image-area-mockup-mackbook #mockup-mackbook, .Napiste_section__page_02__flexbox #image-area-mockup-mackbook #mockup-mackbook, .Napiste_section__page_03__flexbox #image-area-mockup-mackbook #mockup-mackbook {
-        max-height: 40vh;
-        width: 100%; }
-
-.section_title {
-  width: 100%;
-  position: relative;
-  top: 30px; }
-  .section_title__flexbox {
-    display: flex; }
-    .section_title__flexbox h2 {
-      margin-left: 30px;
-      font-family: 'andadabold';
-      font-size: 36px;
-      line-height: 54px;
-      letter-spacing: 0.72px;
-      color: #19336d;
-      order: 2;
-      z-index: 2;
-      margin-left: -40px; }
-      .section_title__flexbox h2:first-letter {
-        text-transform: uppercase; }
-    .section_title__flexbox__square {
-      width: 40px;
-      height: 40px;
-      transform: rotate(45deg);
-      background: rgba(25, 51, 109, 0.25);
-      order: 1;
-      top: 0;
-      transform-origin: top left;
-      margin-left: 40px;
-      z-index: 1; }
-  .section_title__span {
-    width: 80%;
-    height: 4px;
-    margin-left: 20%;
-    background: #19336d; }
-
-#dochazka_square {
-  background: rgba(255, 255, 255, 0.35); }
-
-#HR_square {
-  background: rgba(25, 51, 109, 0.25); }
-
-#Rezervace_title {
-  max-width: 10ch; }
-
-#Rezervace_square {
-  background: rgba(255, 255, 255, 0.35); }
-
-#Operacni_square {
-  background: rgba(25, 51, 109, 0.25); }
-
-h1 {
-  font-family: 'andadabold';
-  font-family: 'andadabold';
-  font-size: 48px;
-  line-height: 72px;
-  letter-spacing: 0.92px;
-  color: #19336d; }
-
-h2 {
-  font-family: 'andadabold';
-  font-family: 'andadabold';
-  font-size: 36px;
-  line-height: 54px;
-  letter-spacing: 0.72px;
-  color: #19336d; }
-
-p {
-  font-size: 18px;
-  line-height: 27px;
-  font-weight: 400;
-  letter-spacing: 0.09px;
-  color: #19336d;
-  margin-left: 10px; }
-
-.background_color_box_first {
-  width: 1200px;
-  height: 1200px;
-  position: absolute;
-  top: 180px;
-  z-index: -1; }
-  .background_color_box_first__square {
-    width: 1200px;
-    height: 1200px;
-    background: #19e0ba;
-    transform: rotate(45deg);
-    transform-origin: top left; }
-
-.background_color_box_second {
-  width: 100%;
-  height: auto;
-  top: 100px;
-  position: absolute;
-  overflow: hidden;
-  z-index: -1;
-  transform: scaleX(-1); }
-  .background_color_box_second__square {
-    width: 1000px;
-    height: 1000px;
-    background: #f4b740;
-    transform: rotate(45deg);
-    transform-origin: top left;
-    max-width: 1000px; }
-
-.background_color_box_third {
-  width: 100%;
-  height: 200%;
-  position: absolute;
-  overflow: hidden;
-  top: -100px;
-  z-index: -1; }
-  .background_color_box_third__square {
-    width: 200%;
-    height: 200%;
-    background: #f4b740;
-    transform: rotate(45deg);
-    transform-origin: top left;
-    max-width: 1000px; }
-
-.background_color_box_fourth {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
-  top: 150px;
-  z-index: -1; }
-  .background_color_box_fourth__square {
-    width: 100%;
-    height: 100%;
-    background: #19e0ba;
-    transform: rotate(45deg);
-    transform-origin: top left;
-    max-width: 1000px; }
-
-.background_color_box_fifth {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
-  top: 200px;
-  z-index: -1;
-  transform: scaleX(-1); }
-  .background_color_box_fifth__square {
-    width: 70%;
-    height: 70%;
-    background: #19e0ba;
-    transform: rotate(45deg);
-    transform-origin: top left;
-    max-width: 1000px; }
-
-.footer {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  height: 1040px;
-  width: 100%;
-  background: #13313d;
-  padding: 40px 30px; }
-  .footer__logo {
-    max-width: 350px; }
-  .footer__contact {
-    display: flex;
-    flex-direction: column;
-    margin: 25px 0 25px 0; }
-    .footer__contact a {
-      font-size: 20px;
-      line-height: 30px;
-      font-weight: 400;
-      letter-spacing: 0.1px;
-      color: #19336d;
-      color: white;
-      padding: 4px 0;
-      text-decoration: none; }
-  .footer__social svg {
-    width: 80px;
-    fill: white; }
-  .footer__social #linkedin_icon_footer {
-    margin-left: 10px; }
-  .footer__links {
-    margin-top: 60px; }
-    .footer__links__box {
-      margin-top: 20px; }
-      .footer__links__box__title {
-        font-family: 'andadabold';
-        font-size: 20px;
-        line-height: 30px;
-        letter-spacing: 0.3px;
-        /* adjusted */
-        color: #19336d;
-        color: white;
-        margin-bottom: 5px;
-        text-transform: uppercase; }
-        .footer__links__box__title:first-letter {
-          text-transform: uppercase; }
-      .footer__links__box__span {
-        width: 80px;
-        height: 2px;
-        background: white;
-        margin-top: -5px; }
-      .footer__links__box__list {
-        list-style: none;
-        margin-top: 5px; }
-        .footer__links__box__list li a {
-          text-decoration: none;
-          font-size: 16px;
-          line-height: 24px;
-          font-weight: 400;
-          letter-spacing: 0.08px;
-          color: #19336d;
-          color: white;
-          margin-left: 10px; }
-  .footer__copyrights {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    margin-top: 30px;
-    font-size: 14px;
-    line-height: 21px;
-    font-weight: 400;
-    letter-spacing: .07px;
-    color: #19336d;
-    color: white; }
-
-html {
-  height: -webkit-fill-available; }
-
-/*# sourceMappingURL=stylesheet.css.map */
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"    display\": expected \";\", was \": flex;\"\A         on line 31 of scss/_layout.scss\A         from line 5 of scss/main.scss\A \A 26: \A 27: .hero_section {\A 28:     \A 29:     height: calc(100vh - #{$nav-height});\A 30:     min-height: -webkit-fill-available\A 31:     display: flex;\A 32:     flex-direction: column;\A 33:     \A 34:     scroll-snap-align: start;\A 35:     scroll-snap-stop: always;\A 36: "; }
