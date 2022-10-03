@@ -377,21 +377,6 @@
 
 <script src="js/script.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-    const aosAnimation = document.querySelectorAll('[data-aos]');
-observer = new IntersectionObserver((entries) => {
-entries.forEach(entry => {
-    if (entry.intersectionRatio > 0) {
-    entry.target.classList.add('aos-animate');
-    } else {
-    entry.target.classList.remove('aos-animate');
-    }
-    });
-});
-aosAnimation.forEach(aosObject => {
-observer.observe(aosObject);
-});
 </script>
     
 </body>
