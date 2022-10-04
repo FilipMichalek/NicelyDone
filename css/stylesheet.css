@@ -90,10 +90,11 @@ header {
     flex-direction: column;
     background: #13313d;
     height: calc(100vh - 60px);
-    max-height: 600px;
+    max-height: 520px;
     top: 0;
     transition: all 0.5s ease-in-out;
-    z-index: -1; }
+    z-index: -1;
+    overflow-y: scroll; }
     header .nav .navigation {
       position: relative;
       display: flex;
@@ -122,12 +123,12 @@ header {
           padding-right: 100px;
           background: #f4b740;
           margin-left: calc(20px - 20px);
-          color: #19336d;
           font-size: 20px;
           line-height: 30px;
           font-weight: 700;
           letter-spacing: 0.1px;
-          color: #19336d; }
+          color: #19336d;
+          color: #13313d; }
     header .nav .nav__social {
       height: auto;
       width: 200px;
@@ -174,49 +175,33 @@ body {
 
 .hero_section {
   height: calc(100vh - 60px);
-  min-height: -webkit-fill-available;
   display: flex;
   flex-direction: column;
   scroll-snap-align: start;
   scroll-snap-stop: always; }
   .hero_section__text_area {
-    margin: 20px 20px 10px 20px; }
-    .hero_section__text_area h1 span::after {
-      content: "\a";
-      /* breaks line after "Jednoduše," word */ }
+    padding: 30px 20px 10px 20px; }
+    .hero_section__text_area h1 {
+      padding-bottom: 20px; }
+      .hero_section__text_area h1 span::before {
+        content: "\a";
+        /* breaks line after "Jednoduše," word */ }
   .hero_section__image_area {
     width: 100%;
-    flex-grow: 2;
-    background-size: cover;
-    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-around; }
-    .hero_section__image_area__mockups_box {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      background: yellow;
-      width: 100%; }
-      .hero_section__image_area__mockups_box__macbook {
-        height: auto;
-        max-height: 600px;
-        width: 100%;
-        display: flex;
-        justify-content: center; }
-        .hero_section__image_area__mockups_box__macbook img {
-          width: auto;
-          max-width: 100%;
-          object-fit: contain; }
+    justify-content: flex-start; }
+    .hero_section__image_area .hero_section__image_area__mockup {
+      width: 100%;
+      display: block;
+      padding: 20px; }
     .hero_section__image_area__badges_box {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin: 0px auto;
+      margin: 0 auto;
       width: 90%;
-      max-width: 510px;
-      max-height: 10vh; }
+      max-width: 510px; }
       .hero_section__image_area__badges_box a {
         width: 45%;
         max-width: 230px; }
@@ -241,12 +226,13 @@ body {
   .Marketing_section__page_03__flexbox, .Napiste_section__page_01__flexbox, .Napiste_section__page_02__flexbox, .Napiste_section__page_03__flexbox {
     display: flex;
     flex-direction: column;
-    width: 100wv; }
+    width: 100%;
+    height: 100%; }
     .dochazka_section__page_01__flexbox__text_area, .dochazka_section__page_02__flexbox__text_area, .dochazka_section__page_03__flexbox__text_area, .HR_section__page_01__flexbox__text_area, .HR_section__page_02__flexbox__text_area, .HR_section__page_03__flexbox__text_area, .Rezervace_section__page_01__flexbox__text_area, .Rezervace_section__page_02__flexbox__text_area, .Rezervace_section__page_03__flexbox__text_area, .Operacni_section__page_01__flexbox__text_area, .Operacni_section__page_02__flexbox__text_area, .Operacni_section__page_03__flexbox__text_area,
     .Marketing_section__page_01__flexbox__text_area,
     .Marketing_section__page_02__flexbox__text_area,
     .Marketing_section__page_03__flexbox__text_area, .Napiste_section__page_01__flexbox__text_area, .Napiste_section__page_02__flexbox__text_area, .Napiste_section__page_03__flexbox__text_area {
-      margin: 50px 20px 10px 20px;
+      padding: 30px 20px 10px 20px;
       display: flex;
       flex-direction: column; }
       .dochazka_section__page_01__flexbox__text_area h3, .dochazka_section__page_02__flexbox__text_area h3, .dochazka_section__page_03__flexbox__text_area h3, .HR_section__page_01__flexbox__text_area h3, .HR_section__page_02__flexbox__text_area h3, .HR_section__page_03__flexbox__text_area h3, .Rezervace_section__page_01__flexbox__text_area h3, .Rezervace_section__page_02__flexbox__text_area h3, .Rezervace_section__page_03__flexbox__text_area h3, .Operacni_section__page_01__flexbox__text_area h3, .Operacni_section__page_02__flexbox__text_area h3, .Operacni_section__page_03__flexbox__text_area h3,
@@ -268,39 +254,28 @@ body {
       .Marketing_section__page_01__flexbox__text_area p,
       .Marketing_section__page_02__flexbox__text_area p,
       .Marketing_section__page_03__flexbox__text_area p, .Napiste_section__page_01__flexbox__text_area p, .Napiste_section__page_02__flexbox__text_area p, .Napiste_section__page_03__flexbox__text_area p {
-        margin-left: 10px;
-        margin-top: 10px; }
-    .dochazka_section__page_01__flexbox__image_area, .dochazka_section__page_02__flexbox__image_area, .dochazka_section__page_03__flexbox__image_area, .HR_section__page_01__flexbox__image_area, .HR_section__page_02__flexbox__image_area, .HR_section__page_03__flexbox__image_area, .Rezervace_section__page_01__flexbox__image_area, .Rezervace_section__page_02__flexbox__image_area, .Rezervace_section__page_03__flexbox__image_area, .Operacni_section__page_01__flexbox__image_area, .Operacni_section__page_02__flexbox__image_area, .Operacni_section__page_03__flexbox__image_area,
-    .Marketing_section__page_01__flexbox__image_area,
-    .Marketing_section__page_02__flexbox__image_area,
-    .Marketing_section__page_03__flexbox__image_area, .Napiste_section__page_01__flexbox__image_area, .Napiste_section__page_02__flexbox__image_area, .Napiste_section__page_03__flexbox__image_area {
+        padding-left: 10px;
+        padding-top: 10px; }
+    .dochazka_section__page_01__flexbox img, .dochazka_section__page_02__flexbox img, .dochazka_section__page_03__flexbox img, .HR_section__page_01__flexbox img, .HR_section__page_02__flexbox img, .HR_section__page_03__flexbox img, .Rezervace_section__page_01__flexbox img, .Rezervace_section__page_02__flexbox img, .Rezervace_section__page_03__flexbox img, .Operacni_section__page_01__flexbox img, .Operacni_section__page_02__flexbox img, .Operacni_section__page_03__flexbox img,
+    .Marketing_section__page_01__flexbox img,
+    .Marketing_section__page_02__flexbox img,
+    .Marketing_section__page_03__flexbox img, .Napiste_section__page_01__flexbox img, .Napiste_section__page_02__flexbox img, .Napiste_section__page_03__flexbox img {
+      display: block;
+      width: auto;
+      height: 100%;
+      padding: 10px; }
+    .dochazka_section__page_01__flexbox #mockup-mackbook, .dochazka_section__page_02__flexbox #mockup-mackbook, .dochazka_section__page_03__flexbox #mockup-mackbook, .HR_section__page_01__flexbox #mockup-mackbook, .HR_section__page_02__flexbox #mockup-mackbook, .HR_section__page_03__flexbox #mockup-mackbook, .Rezervace_section__page_01__flexbox #mockup-mackbook, .Rezervace_section__page_02__flexbox #mockup-mackbook, .Rezervace_section__page_03__flexbox #mockup-mackbook, .Operacni_section__page_01__flexbox #mockup-mackbook, .Operacni_section__page_02__flexbox #mockup-mackbook, .Operacni_section__page_03__flexbox #mockup-mackbook,
+    .Marketing_section__page_01__flexbox #mockup-mackbook,
+    .Marketing_section__page_02__flexbox #mockup-mackbook,
+    .Marketing_section__page_03__flexbox #mockup-mackbook, .Napiste_section__page_01__flexbox #mockup-mackbook, .Napiste_section__page_02__flexbox #mockup-mackbook, .Napiste_section__page_03__flexbox #mockup-mackbook {
+      max-height: 40vh;
       width: 100%;
-      margin-top: 20px; }
-      .dochazka_section__page_01__flexbox__image_area img, .dochazka_section__page_02__flexbox__image_area img, .dochazka_section__page_03__flexbox__image_area img, .HR_section__page_01__flexbox__image_area img, .HR_section__page_02__flexbox__image_area img, .HR_section__page_03__flexbox__image_area img, .Rezervace_section__page_01__flexbox__image_area img, .Rezervace_section__page_02__flexbox__image_area img, .Rezervace_section__page_03__flexbox__image_area img, .Operacni_section__page_01__flexbox__image_area img, .Operacni_section__page_02__flexbox__image_area img, .Operacni_section__page_03__flexbox__image_area img,
-      .Marketing_section__page_01__flexbox__image_area img,
-      .Marketing_section__page_02__flexbox__image_area img,
-      .Marketing_section__page_03__flexbox__image_area img, .Napiste_section__page_01__flexbox__image_area img, .Napiste_section__page_02__flexbox__image_area img, .Napiste_section__page_03__flexbox__image_area img {
-        display: block;
-        width: 70%;
-        margin: auto; }
-    .dochazka_section__page_01__flexbox #image-area-mockup-mackbook, .dochazka_section__page_02__flexbox #image-area-mockup-mackbook, .dochazka_section__page_03__flexbox #image-area-mockup-mackbook, .HR_section__page_01__flexbox #image-area-mockup-mackbook, .HR_section__page_02__flexbox #image-area-mockup-mackbook, .HR_section__page_03__flexbox #image-area-mockup-mackbook, .Rezervace_section__page_01__flexbox #image-area-mockup-mackbook, .Rezervace_section__page_02__flexbox #image-area-mockup-mackbook, .Rezervace_section__page_03__flexbox #image-area-mockup-mackbook, .Operacni_section__page_01__flexbox #image-area-mockup-mackbook, .Operacni_section__page_02__flexbox #image-area-mockup-mackbook, .Operacni_section__page_03__flexbox #image-area-mockup-mackbook,
-    .Marketing_section__page_01__flexbox #image-area-mockup-mackbook,
-    .Marketing_section__page_02__flexbox #image-area-mockup-mackbook,
-    .Marketing_section__page_03__flexbox #image-area-mockup-mackbook, .Napiste_section__page_01__flexbox #image-area-mockup-mackbook, .Napiste_section__page_02__flexbox #image-area-mockup-mackbook, .Napiste_section__page_03__flexbox #image-area-mockup-mackbook {
-      width: 200%;
-      margin-top: 20px;
-      margin-left: -30%; }
-      .dochazka_section__page_01__flexbox #image-area-mockup-mackbook #mockup-mackbook, .dochazka_section__page_02__flexbox #image-area-mockup-mackbook #mockup-mackbook, .dochazka_section__page_03__flexbox #image-area-mockup-mackbook #mockup-mackbook, .HR_section__page_01__flexbox #image-area-mockup-mackbook #mockup-mackbook, .HR_section__page_02__flexbox #image-area-mockup-mackbook #mockup-mackbook, .HR_section__page_03__flexbox #image-area-mockup-mackbook #mockup-mackbook, .Rezervace_section__page_01__flexbox #image-area-mockup-mackbook #mockup-mackbook, .Rezervace_section__page_02__flexbox #image-area-mockup-mackbook #mockup-mackbook, .Rezervace_section__page_03__flexbox #image-area-mockup-mackbook #mockup-mackbook, .Operacni_section__page_01__flexbox #image-area-mockup-mackbook #mockup-mackbook, .Operacni_section__page_02__flexbox #image-area-mockup-mackbook #mockup-mackbook, .Operacni_section__page_03__flexbox #image-area-mockup-mackbook #mockup-mackbook,
-      .Marketing_section__page_01__flexbox #image-area-mockup-mackbook #mockup-mackbook,
-      .Marketing_section__page_02__flexbox #image-area-mockup-mackbook #mockup-mackbook,
-      .Marketing_section__page_03__flexbox #image-area-mockup-mackbook #mockup-mackbook, .Napiste_section__page_01__flexbox #image-area-mockup-mackbook #mockup-mackbook, .Napiste_section__page_02__flexbox #image-area-mockup-mackbook #mockup-mackbook, .Napiste_section__page_03__flexbox #image-area-mockup-mackbook #mockup-mackbook {
-        max-height: 40vh;
-        width: 100%; }
+      margin-left: 30%; }
 
 .section_title {
   width: 100%;
   position: relative;
-  top: 30px; }
+  padding-top: 20px; }
   .section_title__flexbox {
     display: flex; }
     .section_title__flexbox h2 {
@@ -371,14 +346,14 @@ p {
   margin-left: 10px; }
 
 .background_color_box_first {
-  width: 1200px;
-  height: 1200px;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 180px;
   z-index: -1; }
   .background_color_box_first__square {
-    width: 1200px;
-    height: 1200px;
+    width: 800px;
+    height: 800px;
     background: #19e0ba;
     transform: rotate(45deg);
     transform-origin: top left; }
@@ -392,8 +367,8 @@ p {
   z-index: -1;
   transform: scaleX(-1); }
   .background_color_box_second__square {
-    width: 1000px;
-    height: 1000px;
+    width: 400px;
+    height: 800px;
     background: #f4b740;
     transform: rotate(45deg);
     transform-origin: top left;
