@@ -178,6 +178,10 @@ body {
 
 .hero_section {
   height: calc(100vh - 60px);
+  min-height: calc(100vh - 60px);
+  min-height: -moz-available;
+  min-height: -webkit-fill-available;
+  min-height: fill-available;
   display: flex;
   flex-direction: column;
   scroll-snap-align: start;
@@ -221,6 +225,10 @@ body {
 .Marketing_section__page_02,
 .Marketing_section__page_03, .Napiste_section__page_01, .Napiste_section__page_02, .Napiste_section__page_03 {
   height: calc(100vh - 60px);
+  min-height: calc(100vh - 60px);
+  min-height: -moz-available;
+  min-height: -webkit-fill-available;
+  min-height: fill-available;
   scroll-snap-align: start;
   scroll-snap-stop: always; }
   .dochazka_section__page_01__flexbox, .dochazka_section__page_02__flexbox, .dochazka_section__page_03__flexbox, .HR_section__page_01__flexbox, .HR_section__page_02__flexbox, .HR_section__page_03__flexbox, .Rezervace_section__page_01__flexbox, .Rezervace_section__page_02__flexbox, .Rezervace_section__page_03__flexbox, .Operacni_section__page_01__flexbox, .Operacni_section__page_02__flexbox, .Operacni_section__page_03__flexbox,
@@ -427,6 +435,10 @@ p {
   scroll-snap-align: start;
   scroll-snap-stop: always;
   height: 1040px;
+  min-height: calc(100vh - 60px);
+  min-height: -moz-available;
+  min-height: -webkit-fill-available;
+  min-height: fill-available;
   width: 100%;
   background: #13313d;
   padding: 40px 30px; }
