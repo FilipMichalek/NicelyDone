@@ -16,31 +16,31 @@
     rel="icon"
     media="(prefers-color-scheme: dark)"
     />
-    <title>Document</title>
+    <title>NicelyDone</title>
 </head>
 <body>
 
     <div class="wrapper_header">
         <header class="header">
             
-            <div class="logo"><a href=""><img src="IMG/Logos/NicelyDone Logo - Color.svg" alt=""></a></div>
+            <div class="logo"><a href="#hero_section" onclick="menuClose()"><img src="IMG/Logos/NicelyDone Logo - Color.svg" alt=""></a></div>
             <div class="nav_button">
                 <div class="nav_button__burger"></div>
             </div>
             
             <nav class="nav">
                 <ul class="navigation">
-                    <li><a href="">Docházka</a></li>
-                    <li><a href="">HR</a></li>
-                    <li><a href="">Rezervační systém</a></li>
-                    <li><a href="">Operační</a></li>
-                    <li><a href="">Marketing</a></li>
-                    <li class="cta_button"><a href="">Napište nám</a></li>
+                    <li><a href="#Dochazka_section" onclick="menuClose()">docházka</a></li>
+                    <li><a href="#HR_section" onclick="menuClose()">HR</a></li>
+                    <li><a href="#Rezervace_section" onclick="menuClose()">Rezervační systém</a></li>
+                    <li><a href="#Operacni_section" onclick="menuClose()">Operační</a></li>
+                    <li><a href="#Marketing_section" onclick="menuClose()">Marketing</a></li>
+                    <li class="cta_button"><a href="#Napiste_section" onclick="menuClose()">napište nám</a></li>
                 </ul>
                 
                 <div class="nav__social">
-                    <a href=""><svg id="youtube_icon_header" data-name="youtube_icon_header" viewBox="0 0 1193.1 1193.1"><path d="M511.55,465.49l228.33,130.96-228.33,130.96V465.49ZM1193.1,0V1193.1H0V0H1193.1Zm-178.79,386.58c-10.19-37.66-39.57-67.16-77.23-77.23-50.59-19.53-540.62-29.1-682.76,.56-37.66,10.19-67.16,39.57-77.23,77.23-22.83,100.18-24.57,316.76,.56,419.17,10.19,37.66,39.57,67.16,77.23,77.23,100.18,23.06,576.43,26.3,682.76,0,37.66-10.19,67.16-39.57,77.23-77.23,24.34-109.13,26.08-312.28-.56-419.73Z"/></svg></a>
-                    <a href=""><svg id="linkedin_icon_header" data-name="linkedin_icon_header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1193.1 1193.1"><path d="M0,0V1193.1H1193.1V0H0ZM273.43,187.99c63.86,0,110.82,38.22,113.86,92.77,0,56.64-47.9,96.93-113.86,96.93s-113.86-41.27-113.86-95.82,47.9-93.89,113.86-93.89Zm114.04,798.12c0,10.45-8.55,19.01-19.01,19.01H178.39c-10.45,0-19.01-8.55-19.01-19.01V434.9c0-10.45,8.55-19.01,19.01-19.01h190.07c10.45,0,19.01,8.55,19.01,19.01V986.11Zm646.25,0c0,10.45-8.55,19.01-19.01,19.01h-171.07c-10.49,0-19.01-8.52-19.01-19.01v-294.61c0-45.05-34.61-81.74-78.7-85.16-2.28-.38-4.55-.37-6.83-.37s-4.55,0-6.83,.37c-44.1,3.42-78.7,40.11-78.7,85.16v294.61c0,10.49-8.52,19.01-19.01,19.01h-171.07c-10.45,0-19.01-8.55-19.01-19.01V434.9c0-10.45,8.55-19.01,19.01-19.01h190.07c10.45,0,19.01,8.55,19.01,19.01v28.33c30.6-21.48,81.14-47.33,148.05-47.33,147.12,0,213.09,124.12,213.09,247.09v323.12Z"/></svg></a>
+                    <a href="https://www.youtube.com/" target=”_blank”><svg id="youtube_icon_header" data-name="youtube_icon_header" viewBox="0 0 1193.1 1193.1"><path d="M511.55,465.49l228.33,130.96-228.33,130.96V465.49ZM1193.1,0V1193.1H0V0H1193.1Zm-178.79,386.58c-10.19-37.66-39.57-67.16-77.23-77.23-50.59-19.53-540.62-29.1-682.76,.56-37.66,10.19-67.16,39.57-77.23,77.23-22.83,100.18-24.57,316.76,.56,419.17,10.19,37.66,39.57,67.16,77.23,77.23,100.18,23.06,576.43,26.3,682.76,0,37.66-10.19,67.16-39.57,77.23-77.23,24.34-109.13,26.08-312.28-.56-419.73Z"/></svg></a>
+                    <a href="https://cz.linkedin.com/" target=”_blank”><svg id="linkedin_icon_header" data-name="linkedin_icon_header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1193.1 1193.1"><path d="M0,0V1193.1H1193.1V0H0ZM273.43,187.99c63.86,0,110.82,38.22,113.86,92.77,0,56.64-47.9,96.93-113.86,96.93s-113.86-41.27-113.86-95.82,47.9-93.89,113.86-93.89Zm114.04,798.12c0,10.45-8.55,19.01-19.01,19.01H178.39c-10.45,0-19.01-8.55-19.01-19.01V434.9c0-10.45,8.55-19.01,19.01-19.01h190.07c10.45,0,19.01,8.55,19.01,19.01V986.11Zm646.25,0c0,10.45-8.55,19.01-19.01,19.01h-171.07c-10.49,0-19.01-8.52-19.01-19.01v-294.61c0-45.05-34.61-81.74-78.7-85.16-2.28-.38-4.55-.37-6.83-.37s-4.55,0-6.83,.37c-44.1,3.42-78.7,40.11-78.7,85.16v294.61c0,10.49-8.52,19.01-19.01,19.01h-171.07c-10.45,0-19.01-8.55-19.01-19.01V434.9c0-10.45,8.55-19.01,19.01-19.01h190.07c10.45,0,19.01,8.55,19.01,19.01v28.33c30.6-21.48,81.14-47.33,148.05-47.33,147.12,0,213.09,124.12,213.09,247.09v323.12Z"/></svg></a>
                 </div> <!-- nav__social-->
             </nav> <!-- nav -->
             
@@ -48,14 +48,14 @@
     </div> <!-- WRAPPER_HEADER -->
 
 <div class="container"> <!-- SCROLL-SNAP CONTAINER -->
-    
+    <span class="blur_box" onclick="menuClose()"></span>
     <div class="wrapper">
 
-    <main class="hero_section">
+    <main class="hero_section" id="hero_section">
         
         <div class="hero_section__text_area">
-            <h1>Jednoduše,<span></span> s přehledem</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            <h1>jednoduše,<span></span> s přehledem</h1>
+            <p>lorem ipsum, dolor sit amet consectetur adipisicing elit. 
             ěšrefčrč f Lorem ipsum, dolor sit amet consectetur. Voluptates, sapiente!
             
             Lorem ipsum, dolor sit amet consectetur. Voluptates, Lorem ipsum, dolor sit amet consectetur. Voluptates
@@ -74,13 +74,27 @@
             
     </main>
 
+    <section class="download_section">
+        <div class="download_section__page_01">
+            <div class="download_section__page_01__image_area">
+                
+                <img class="download_section__page_01__image_area__mockup" src="IMG/Mockups/Mockup_iPhone and MacBook.svg" alt="" >
+        
+                <div class="download_section__page_01__image_area__badges_box">
+                    <a href=""><img src="IMG/Badges/App Store Badge - Black background.svg" alt=""></a>
+                    <a href=""><img src="IMG/Badges/Google Play Badge - Black background.svg" alt=""></a>
+                </div>
+                    
+            </div>
+        </div>
+    </section>
+
     
     <div class="background_color_box_first">
         <div class="background_color_box_first__square"></div>
     </div>
-    
 
-        <section class="dochazka_section">
+        <section class="dochazka_section" id="Dochazka_section">
             <div class="dochazka_section__page_01">
                 <div class="section_title">
                     <div class="section_title__flexbox">
@@ -122,7 +136,7 @@
 
     <div class="wrapper">
 
-    <section class="HR_section">
+    <section class="HR_section" id="HR_section">
 
         <div class="HR_section__page_01">
             <div class="background_color_box_second">
@@ -141,7 +155,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing
                         elit. Dignissimos alias distinctio odit. Ut omnis aliquid 
                         consequatur exercitationem excepturi sapiente est.</p>
-                    <p>Yeah, but your scientists were so preoccupied with whether or not they could, they didn't stop to think if they should.</p>
+                    
                 </div><!-- HR_section__page_01__flexbox__text_area -->
                 <img class="HR_section__page_01__flexbox__mockup" src="IMG/Mockups/Mockup_MacBook Pro 16 Mockup - Empty.svg" id="mockup-mackbook" alt="">
             </div> <!-- HR_section__page_01__flexbox -->
@@ -165,7 +179,7 @@
 
     <div class="wrapper">
 
-        <section class="Rezervace_section">
+        <section class="Rezervace_section" id="Rezervace_section">
         <div class="background_color_box_third">
             <div class="background_color_box_third__square"></div>
         </div>
@@ -210,7 +224,7 @@
 
         <div class="wrapper">
 
-            <section class="Operacni_section">
+            <section class="Operacni_section" id="Operacni_section">
             <div class="background_color_box_fourth">
                 <div class="background_color_box_fourth__square"></div>
             </div>
@@ -270,7 +284,7 @@
 
             <div class="wrapper">
 
-                <section class="Marketing_section">
+                <section class="Marketing_section" id="Marketing_section">
                 <div class="background_color_box_fifth">
                     <div class="background_color_box_fifth__square"></div>
                 </div>
@@ -302,10 +316,10 @@
 
                 <div class="wrapper">
 
-                    <section class="Napiste_section">
+                    <section class="Napiste_section" id="Napiste_section">
                 
                         <div class="Napiste_section__page_01">
-                            <div class="section_title">
+                            <div class="section_title" id="napiste_nam_section_title">
                                 <div class="section_title__flexbox">
                                     <h2>Napište nám</h2>
                                     <div id="Napiste_square" class="section_title__flexbox__square"></div>
@@ -318,24 +332,27 @@
                 </div> <!-- WRAPPER -->
 
                     <footer class="footer">
-                        <div class="footer__logo">
-                            <img src="IMG/Logos/NicelyDone Logo - White.svg" alt="">
+                        <div class="footer__about">
+                            <div class="footer__about__logo">
+                                <img src="IMG/Logos/NicelyDone Logo - White.svg" alt="">
+                            </div>
+                            <div class="footer__about__contact">
+                                <a href="tel:+420123456789">+420 123 456 789</a>
+                                <a href="mailto:info@nicelydone.cz">info@nicelydone.cz</a>
+                            </div>
+                            <div class="footer__about__social">
+                                <a href="https://www.youtube.com/" target=”_blank”><svg id="youtube_icon_footer" data-name="youtube_icon_footer" viewBox="0 0 1193.1 1193.1"><path d="M511.55,465.49l228.33,130.96-228.33,130.96V465.49ZM1193.1,0V1193.1H0V0H1193.1Zm-178.79,386.58c-10.19-37.66-39.57-67.16-77.23-77.23-50.59-19.53-540.62-29.1-682.76,.56-37.66,10.19-67.16,39.57-77.23,77.23-22.83,100.18-24.57,316.76,.56,419.17,10.19,37.66,39.57,67.16,77.23,77.23,100.18,23.06,576.43,26.3,682.76,0,37.66-10.19,67.16-39.57,77.23-77.23,24.34-109.13,26.08-312.28-.56-419.73Z"/></svg></a>
+                                <a href="https://cz.linkedin.com/" target=”_blank”><svg id="linkedin_icon_footer" data-name="linkedin_icon_footer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1193.1 1193.1"><path d="M0,0V1193.1H1193.1V0H0ZM273.43,187.99c63.86,0,110.82,38.22,113.86,92.77,0,56.64-47.9,96.93-113.86,96.93s-113.86-41.27-113.86-95.82,47.9-93.89,113.86-93.89Zm114.04,798.12c0,10.45-8.55,19.01-19.01,19.01H178.39c-10.45,0-19.01-8.55-19.01-19.01V434.9c0-10.45,8.55-19.01,19.01-19.01h190.07c10.45,0,19.01,8.55,19.01,19.01V986.11Zm646.25,0c0,10.45-8.55,19.01-19.01,19.01h-171.07c-10.49,0-19.01-8.52-19.01-19.01v-294.61c0-45.05-34.61-81.74-78.7-85.16-2.28-.38-4.55-.37-6.83-.37s-4.55,0-6.83,.37c-44.1,3.42-78.7,40.11-78.7,85.16v294.61c0,10.49-8.52,19.01-19.01,19.01h-171.07c-10.45,0-19.01-8.55-19.01-19.01V434.9c0-10.45,8.55-19.01,19.01-19.01h190.07c10.45,0,19.01,8.55,19.01,19.01v28.33c30.6-21.48,81.14-47.33,148.05-47.33,147.12,0,213.09,124.12,213.09,247.09v323.12Z"/></svg></a>
+                            </div>
                         </div>
-                        <div class="footer__contact">
-                            <a href="">+420 123 456 789</a>
-                            <a href="">info@nicelydone.cz</a>
-                        </div>
-                        <div class="footer__social">
-                            <a href=""><svg id="youtube_icon_footer" data-name="youtube_icon_footer" viewBox="0 0 1193.1 1193.1"><path d="M511.55,465.49l228.33,130.96-228.33,130.96V465.49ZM1193.1,0V1193.1H0V0H1193.1Zm-178.79,386.58c-10.19-37.66-39.57-67.16-77.23-77.23-50.59-19.53-540.62-29.1-682.76,.56-37.66,10.19-67.16,39.57-77.23,77.23-22.83,100.18-24.57,316.76,.56,419.17,10.19,37.66,39.57,67.16,77.23,77.23,100.18,23.06,576.43,26.3,682.76,0,37.66-10.19,67.16-39.57,77.23-77.23,24.34-109.13,26.08-312.28-.56-419.73Z"/></svg></a>
-                            <a href=""><svg id="linkedin_icon_footer" data-name="linkedin_icon_footer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1193.1 1193.1"><path d="M0,0V1193.1H1193.1V0H0ZM273.43,187.99c63.86,0,110.82,38.22,113.86,92.77,0,56.64-47.9,96.93-113.86,96.93s-113.86-41.27-113.86-95.82,47.9-93.89,113.86-93.89Zm114.04,798.12c0,10.45-8.55,19.01-19.01,19.01H178.39c-10.45,0-19.01-8.55-19.01-19.01V434.9c0-10.45,8.55-19.01,19.01-19.01h190.07c10.45,0,19.01,8.55,19.01,19.01V986.11Zm646.25,0c0,10.45-8.55,19.01-19.01,19.01h-171.07c-10.49,0-19.01-8.52-19.01-19.01v-294.61c0-45.05-34.61-81.74-78.7-85.16-2.28-.38-4.55-.37-6.83-.37s-4.55,0-6.83,.37c-44.1,3.42-78.7,40.11-78.7,85.16v294.61c0,10.49-8.52,19.01-19.01,19.01h-171.07c-10.45,0-19.01-8.55-19.01-19.01V434.9c0-10.45,8.55-19.01,19.01-19.01h190.07c10.45,0,19.01,8.55,19.01,19.01v28.33c30.6-21.48,81.14-47.33,148.05-47.33,147.12,0,213.09,124.12,213.09,247.09v323.12Z"/></svg></a>
-                        </div>
+
                         <div class="footer__links">
                             <div class="footer__links__box">
                                 <h4 class="footer__links__box__title">LINK LIST</h4>
                                 <div class="footer__links__box__span"></div>
                                 <ul class="footer__links__box__list">
-                                    <li><a href="">Lorem, ipsum dolor.</a></li>
-                                    <li><a href="">LINK</a></li>
+                                    <li><a href="">lorem, ipsum dolor f.</a></li>
+                                    <li><a href="">Lorem ipsum dolor sit amet.</a></li>
                                     <li><a href="">LINK</a></li>
                                     <li><a href="">LINK</a></li>
                                     <li><a href="">LINK</a></li>

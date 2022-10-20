@@ -1,25 +1,37 @@
 const navButton = document.querySelector(".nav_button");
 const navLinks = document.querySelector("nav");
-const scrollContainer = document.querySelector(".container")
+let scrollContainer = document.querySelector(".container")
+let blurBox = document.querySelector(".blur_box")
 let menuOpen = false;
 
-// This event listener does: 
-// 1. Creates and removes classes that enables navButton animations
-// 2. Disables scrolling
-// 3. Chanes position of navigation links box, which makes them visible or hides them
+/* 
+This event listener does: 
+1. Creates and removes classes that enables navButton animations
+2. Disables scrolling
+3. Chanes position of navigation links box, which makes them visible or hides them
+4. Changes css of blur_box that its is or is not visible behind opened mobile navigation
+*/
 navButton.addEventListener("click", () => {
     
     if (!menuOpen) {
-        navButton.classList.add("open");
-        menuOpen = true;
-        navLinks.style.transform = "translateY(60px)";
+        navButton.classList.add("open")
+        menuOpen = true
+        navLinks.style.transform = "translateY(60px)"
+        blurBox.style.cssText = `
+        opacity: 1;
+        z-index: 100;
+        `;
         disable()
     }
     else {
-        enable()
-        navButton.classList.remove("open");
+        navButton.classList.remove("open")
         menuOpen = false;
-        navLinks.style.transform = "translateY(-100%)";
+        navLinks.style.transform = "translateY(-100%)"
+        blurBox.style.cssText = `
+        opacity: 0;
+        z-index: -100;
+        `;
+        enable()  
     }
 })
 
@@ -70,14 +82,26 @@ function enable(){
       );
 }
 
+// Onclick function to close mobile navigation, blur_box and enable scrolling
+function menuClose() {
+  navButton.classList.remove("open")
+  menuOpen = false;
+  navLinks.style.transform = "translateY(-100%)"
+  blurBox.style.cssText = `
+  opacity: 0;
+  z-index: -100;
+  `;
+  enable()  
+}
+
 
   // IMAGES
 let imageHeightLimit = 200
-
-// Hero section
 let header = document.querySelector(".header")
 let headerHeight = header.offsetHeight
 
+// Hero section
+if (document.documentElement.clientWidth < 1203) {
 let heroTextArea = document.querySelector(".hero_section__text_area")
 let heroTextAreaHeight = heroTextArea.offsetHeight
 
@@ -93,6 +117,20 @@ heroMockup.style.height = "calc(100% - " + heroBadgesHeight + "px)"
 
 if (heroImageArea.offsetHeight < imageHeightLimit) {
   heroMockup.style.display = "none"
+}
+}
+// Download section__page_01
+
+let downloadImageArea = document.querySelector(".download_section__page_01__image_area")
+let downloadMockup = document.querySelector(".download_section__page_01__image_area__mockup")
+let downloadBadges = document.querySelector(".download_section__page_01__image_area__badges_box")
+let downloadBadgesHeight = downloadBadges.offsetHeight;
+
+downloadMockup.style.height = "calc(100% - " + downloadBadgesHeight + "px)"
+downloadMockup.style.maxHeight = "220px"
+
+if (downloadImageArea.offsetHeight < imageHeightLimit) {
+  downloadMockup.style.display = "none"
 }
 
 // dochazka_section__page_01
