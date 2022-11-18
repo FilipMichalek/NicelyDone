@@ -1,7 +1,14 @@
 @charset "UTF-8";
+/**
+*
+* Testing
+*
+**/
 /* LOGO COLORS */
 /* LOGO COLORS - OPACITY TITLE COLORS */
 /* LOGO COLORS - OPACITY HOVER COLORS */
+/* Hover */
+/* Layout responsive variables */
 /* This file contains:
     > @font-face
     > font related @mixins
@@ -29,9 +36,108 @@
 body {
   font-family: 'arimoregular'; }
 
-p {
-  font-family: 'arimoregular'; }
+@media (max-width: 1023px) {
+  h1 {
+    font-family: 'andadabold';
+    font-size: 48px;
+    line-height: 72px;
+    letter-spacing: 0.92px;
+    color: #19336d; }
 
+  h2 {
+    font-family: 'andadabold';
+    font-size: 36px;
+    line-height: 54px;
+    letter-spacing: 0.72px;
+    color: #19336d; }
+
+  h3 {
+    font-family: 'andadaregular';
+    font-size: 36px;
+    line-height: 54px;
+    font-weight: 400;
+    letter-spacing: 0.72px;
+    color: #19336d; }
+
+  h4 {
+    font-family: 'andadabold';
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.3px;
+    /* adjusted */
+    color: #19336d; }
+
+  p {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    color: #19336d; }
+
+  .header .nav .navigation li a {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    color: #19336d; }
+
+  .footer__content__links__box__list li a {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    color: #19336d; } }
+@media (min-width: 1024px) {
+  h1 {
+    font-family: 'andadabold';
+    font-size: 60px;
+    line-height: 90px;
+    letter-spacing: 1.2px;
+    color: #19336d; }
+
+  h2 {
+    font-family: 'andadabold';
+    font-size: 72px;
+    line-height: 108px;
+    letter-spacing: 1.44px;
+    color: #19336d; }
+
+  h3 {
+    font-family: 'andadaregular';
+    font-size: 48px;
+    line-height: 72px;
+    font-weight: 400;
+    letter-spacing: 0.92px;
+    color: #19336d; }
+
+  h4 {
+    font-family: 'andadabold';
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.3px;
+    /* adjusted */
+    color: #19336d; }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    color: #19336d; }
+
+  .header .nav .navigation li a {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    color: #19336d; }
+
+  .footer__content__links__box__list li a {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    color: #19336d; } }
 .wrapper_header {
   position: absolute;
   width: 100%;
@@ -46,13 +152,25 @@ header {
   align-items: center;
   position: absolute;
   z-index: initial;
-  background: white;
-  top: 0; }
+  background: white; }
+  @media (min-width: 768px) {
+    header {
+      height: 70px; } }
+  @media (min-width: 1366px) {
+    header {
+      height: 95px;
+      position: relative; } }
   header .logo {
     width: 150px;
     margin-left: 20px; }
     header .logo a img {
       display: block; }
+    @media (min-width: 769px) {
+      header .logo {
+        width: 250px; } }
+    @media (min-width: 1921px) {
+      header .logo {
+        width: 350px; } }
   header .nav_button {
     display: flex;
     flex-direction: column;
@@ -63,6 +181,9 @@ header {
     position: relative;
     cursor: pointer;
     margin-right: 20px; }
+    @media (min-width: 1366px) {
+      header .nav_button {
+        display: none; } }
     header .nav_button .nav_button__burger {
       width: 30px;
       height: 4px;
@@ -89,38 +210,91 @@ header {
     display: flex;
     flex-direction: column;
     background: #13313d;
-    height: calc(100vh - 60px);
-    max-height: 535px;
+    height: auto;
     top: 0;
     transition: all 0.5s ease-in-out;
     z-index: -1;
-    overflow-y: auto; }
+    overflow-y: scroll; }
+    @media (min-width: 1366px) {
+      header .nav {
+        height: 95px !important;
+        position: relative;
+        transform: translateY(0%) !important;
+        z-index: 100;
+        overflow: hidden;
+        background: white; } }
     header .nav .navigation {
       position: relative;
       display: flex;
       flex-direction: column;
       list-style: none;
       z-index: -2;
-      margin: 20px 30px; }
+      margin: 20px 30px;
+      height: 100%; }
+      @media (min-width: 1366px) {
+        header .nav .navigation {
+          height: 95px !important;
+          flex-direction: row;
+          padding: 0;
+          margin: 0 !important;
+          align-items: center;
+          justify-content: flex-end; } }
       header .nav .navigation:nth-child(1) {
-        margin-top: 10px; }
+        margin-top: 30px; }
       header .nav .navigation li {
-        margin-top: 20px; }
+        margin-top: 20px;
+        position: relative;
+        background: lightblue;
+        display: inline-block;
+        z-index: 2; }
+        @media (min-width: 1366px) {
+          header .nav .navigation li {
+            margin-top: 0;
+            margin-left: 30px; } }
+        header .nav .navigation li::before {
+          content: "";
+          width: 25px;
+          height: 25px;
+          background: red;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          transform: rotate(45deg);
+          transition: all 0.2s ease-in-out;
+          margin-top: 100px;
+          z-index: 1;
+          opacity: 0.3;
+          display: inline-block; }
         header .nav .navigation li a {
-          font-size: 18px;
-          line-height: 27px;
-          font-weight: 400;
-          letter-spacing: 0.03em;
-          color: #19336d;
           text-decoration: none;
           color: white;
-          margin-top: 30px;
+          margin-top: 0;
           margin-left: 20px;
-          display: inline-block; }
+          display: inline-block;
+          z-index: 2; }
           header .nav .navigation li a:first-letter {
             text-transform: uppercase; }
+          @media (min-width: 360px) {
+            header .nav .navigation li a {
+              padding: 0; } }
+          @media (min-width: 1366px) {
+            header .nav .navigation li a {
+              color: #19336d !important; } }
       header .nav .navigation .cta_button {
-        margin-top: calc(30px + 10px); }
+        margin-top: calc(30px); }
+        @media (min-width: 1366px) {
+          header .nav .navigation .cta_button {
+            padding: 0;
+            margin: 0;
+            height: 100% !important;
+            display: flex;
+            align-items: center;
+            background: #f4b740; } }
+        header .nav .navigation .cta_button::before {
+          display: none; }
         header .nav .navigation .cta_button a {
           padding: 20px;
           padding-right: 100px;
@@ -132,12 +306,18 @@ header {
           letter-spacing: 0.03em;
           color: #19336d;
           color: #13313d; }
+          @media (min-width: 1366px) {
+            header .nav .navigation .cta_button a {
+              display: block; } }
     header .nav .nav__social {
       height: auto;
       width: 200px;
       display: flex;
       justify-content: space-between;
       margin: 40px auto; }
+      @media (min-width: 1366px) {
+        header .nav .nav__social {
+          display: none !important; } }
       header .nav .nav__social svg {
         display: block;
         width: 80px;
@@ -154,62 +334,13 @@ header {
 .nav_button.open .nav_button__burger::after {
   transform: rotate(-45deg) translate(35px, 35px); }
 
-@media only screen and (min-width: 140px) {
-  .navigation li a {
-    margin-top: 0 !important;
-    height: auto !important; }
-
-  .cta_button {
-    padding-top: 0 !important;
-    margin-top: 0;
-    height: auto; } }
-@media only screen and (min-width: 1366px) {
-  header {
-    position: relative !important; }
-
-  .nav_button {
-    display: none !important; }
-
-  .nav {
-    position: relative !important;
-    flex-direction: row;
-    transform: translateY(0%) !important;
-    height: 60px !important;
-    top: 0 !important;
-    offset-anchor: auto !important;
-    z-index: 100 !important;
-    overflow: hidden !important;
-    background: white !important; }
-    .nav .navigation {
-      flex-direction: row !important;
-      padding: 0 !important;
-      margin: 0 !important;
-      align-items: center;
-      justify-content: flex-end;
-      height: 100% !important; }
-      .nav .navigation li {
-        margin-top: 0 !important;
-        margin-left: 30px !important; }
-        .nav .navigation li a {
-          color: #19336d !important; }
-      .nav .navigation .cta_button {
-        padding: 0 !important;
-        margin: 0 !important;
-        height: 100%;
-        display: flex;
-        align-items: center; }
-        .nav .navigation .cta_button a {
-          display: block;
-          margin: 0 !important;
-          height: 100%;
-          margin-left: calc(40px - 20px) !important;
-          padding: 20px 20px 80px 20px; }
-    .nav .nav_social {
-      display: none !important; } }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth; }
 
 body {
   overflow: hidden; }
@@ -219,49 +350,66 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  height: calc(100vh - 60px);
-  max-height: calc(100vh - 60px);
-  max-height: -moz-available;
-  max-height: -webkit-fill-available;
-  max-height: fill-available;
+  height: calc(var(--vh, 1vh) * 100 - 60px);
   width: 100%;
-  position: relative;
-  margin-top: 60px; }
+  position: fixed;
+  margin-top: 60px !important;
+  scroll-margin-top: 10em;
+  bottom: 0; }
+  @media (min-width: 769px) {
+    .container {
+      height: calc(var(--vh, 1vh) * 100 - 70px);
+      margin-top: 70px; } }
+  @media (min-width: 1366px) {
+    .container {
+      scroll-snap-type: none;
+      height: calc(var(--vh, 1vh) * 100 - 95px);
+      margin-top: 95px; } }
 
 .blur_box {
   top: 0;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   content: "";
-  height: calc(100vh - 60px);
-  max-height: calc(100vh - 60px);
-  max-height: -moz-available;
-  max-height: -webkit-fill-available;
-  max-height: fill-available;
+  height: calc(var(--vh, 1vh) * 100 - 60px);
   width: 100%;
   margin-top: 60px;
   opacity: 0;
   position: fixed;
   z-index: -10;
   transition: all 0.3s ease-in-out; }
+  @media (min-width: 769px) {
+    .blur_box {
+      height: calc(var(--vh, 1vh) * 100 - 70px);
+      margin-top: 70px; } }
+  @media (min-width: 1367px) {
+    .blur_box {
+      height: calc(var(--vh, 1vh) * 100 - 70px);
+      margin-top: 70px; } }
 
 .wrapper {
   position: relative;
   z-index: 10; }
 
 .hero_section {
-  height: calc(100vh - 60px);
-  max-height: calc(100vh - 60px);
-  max-height: -moz-available;
-  max-height: -webkit-fill-available;
-  max-height: fill-available;
+  height: calc(var(--vh, 1vh) * 100 - 60px);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   scroll-snap-align: start;
   scroll-snap-stop: always; }
+  @media (min-width: 1366px) {
+    .hero_section {
+      margin: 0 auto;
+      max-width: 1140px;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; } }
   .hero_section__text_area {
     padding: 30px 20px 10px 20px; }
+    @media (min-width: 1366px) {
+      .hero_section__text_area {
+        max-width: 540px; } }
     .hero_section__text_area h1 {
       padding-bottom: 20px; }
       .hero_section__text_area h1 span::before {
@@ -277,12 +425,25 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start; }
+    @media (min-width: 1366px) {
+      .hero_section__image_area {
+        justify-content: center;
+        height: 100%; } }
     .hero_section__image_area .hero_section__image_area__mockup {
       width: 100%;
       padding: 20px;
       display: none; }
+      @media (max-width: 359px) {
+        .hero_section__image_area .hero_section__image_area__mockup {
+          display: none;
+          max-height: 400px; } }
+      @media (min-width: 360px) {
+        .hero_section__image_area .hero_section__image_area__mockup {
+          display: block; } }
+      @media (min-width: 1366px) {
+        .hero_section__image_area .hero_section__image_area__mockup {
+          max-height: 800px; } }
     .hero_section__image_area__badges_box {
-      /* display: flex; */
       display: none;
       justify-content: space-between;
       align-items: center;
@@ -290,6 +451,9 @@ body {
       width: 90%;
       max-width: 410px;
       padding: 20px 0; }
+      @media (min-width: 360px) {
+        .hero_section__image_area__badges_box {
+          display: flex; } }
       .hero_section__image_area__badges_box a {
         width: 45%;
         max-width: 180px; }
@@ -301,12 +465,11 @@ body {
           border-radius: 5px;
           background: black; }
 
+@media (min-width: 360px) {
+  .download_section {
+    display: none; } }
 .download_section__page_01 {
-  height: calc(100vh - 60px);
-  max-height: calc(100vh - 60px);
-  max-height: -moz-available;
-  max-height: -webkit-fill-available;
-  max-height: fill-available;
+  height: calc(var(--vh, 1vh) * 100 - 60px);
   scroll-snap-align: start;
   scroll-snap-stop: always; }
   .download_section__page_01__image_area {
@@ -343,14 +506,22 @@ body {
 .Marketing_section__page_01,
 .Marketing_section__page_02,
 .Marketing_section__page_03, .Napiste_section__page_01, .Napiste_section__page_02, .Napiste_section__page_03 {
-  height: calc(100vh - 60px);
-  max-height: calc(100vh - 60px);
-  max-height: -moz-available;
-  max-height: -webkit-fill-available;
-  max-height: fill-available;
+  height: calc(var(--vh, 1vh) * 100 - 60px);
+  position: relative;
   scroll-snap-align: start;
-  scroll-snap-stop: always;
-  margin: 0 auto; }
+  scroll-snap-stop: always; }
+  @media (min-width: 360px) {
+    .dochazka_section__page_01, .dochazka_section__page_02, .dochazka_section__page_03, .HR_section__page_01, .HR_section__page_02, .HR_section__page_03, .Rezervace_section__page_01, .Rezervace_section__page_02, .Rezervace_section__page_03, .Operacni_section__page_01, .Operacni_section__page_02, .Operacni_section__page_03,
+    .Marketing_section__page_01,
+    .Marketing_section__page_02,
+    .Marketing_section__page_03, .Napiste_section__page_01, .Napiste_section__page_02, .Napiste_section__page_03 {
+      padding: 20px; } }
+  @media (min-width: 768px) {
+    .dochazka_section__page_01, .dochazka_section__page_02, .dochazka_section__page_03, .HR_section__page_01, .HR_section__page_02, .HR_section__page_03, .Rezervace_section__page_01, .Rezervace_section__page_02, .Rezervace_section__page_03, .Operacni_section__page_01, .Operacni_section__page_02, .Operacni_section__page_03,
+    .Marketing_section__page_01,
+    .Marketing_section__page_02,
+    .Marketing_section__page_03, .Napiste_section__page_01, .Napiste_section__page_02, .Napiste_section__page_03 {
+      padding: 30px; } }
   .dochazka_section__page_01__flexbox, .dochazka_section__page_02__flexbox, .dochazka_section__page_03__flexbox, .HR_section__page_01__flexbox, .HR_section__page_02__flexbox, .HR_section__page_03__flexbox, .Rezervace_section__page_01__flexbox, .Rezervace_section__page_02__flexbox, .Rezervace_section__page_03__flexbox, .Operacni_section__page_01__flexbox, .Operacni_section__page_02__flexbox, .Operacni_section__page_03__flexbox,
   .Marketing_section__page_01__flexbox,
   .Marketing_section__page_02__flexbox,
@@ -359,6 +530,24 @@ body {
     flex-direction: column;
     width: 100%;
     height: 100%; }
+    @media (min-width: 360px) {
+      .dochazka_section__page_01__flexbox, .dochazka_section__page_02__flexbox, .dochazka_section__page_03__flexbox, .HR_section__page_01__flexbox, .HR_section__page_02__flexbox, .HR_section__page_03__flexbox, .Rezervace_section__page_01__flexbox, .Rezervace_section__page_02__flexbox, .Rezervace_section__page_03__flexbox, .Operacni_section__page_01__flexbox, .Operacni_section__page_02__flexbox, .Operacni_section__page_03__flexbox,
+      .Marketing_section__page_01__flexbox,
+      .Marketing_section__page_02__flexbox,
+      .Marketing_section__page_03__flexbox, .Napiste_section__page_01__flexbox, .Napiste_section__page_02__flexbox, .Napiste_section__page_03__flexbox {
+        max-width: 650px;
+        margin: 0 auto; } }
+    @media (min-width: 1366px) {
+      .dochazka_section__page_01__flexbox, .dochazka_section__page_02__flexbox, .dochazka_section__page_03__flexbox, .HR_section__page_01__flexbox, .HR_section__page_02__flexbox, .HR_section__page_03__flexbox, .Rezervace_section__page_01__flexbox, .Rezervace_section__page_02__flexbox, .Rezervace_section__page_03__flexbox, .Operacni_section__page_01__flexbox, .Operacni_section__page_02__flexbox, .Operacni_section__page_03__flexbox,
+      .Marketing_section__page_01__flexbox,
+      .Marketing_section__page_02__flexbox,
+      .Marketing_section__page_03__flexbox, .Napiste_section__page_01__flexbox, .Napiste_section__page_02__flexbox, .Napiste_section__page_03__flexbox {
+        margin-inline: auto;
+        max-width: 1140px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        top: -200px; } }
     .dochazka_section__page_01__flexbox__text_area, .dochazka_section__page_02__flexbox__text_area, .dochazka_section__page_03__flexbox__text_area, .HR_section__page_01__flexbox__text_area, .HR_section__page_02__flexbox__text_area, .HR_section__page_03__flexbox__text_area, .Rezervace_section__page_01__flexbox__text_area, .Rezervace_section__page_02__flexbox__text_area, .Rezervace_section__page_03__flexbox__text_area, .Operacni_section__page_01__flexbox__text_area, .Operacni_section__page_02__flexbox__text_area, .Operacni_section__page_03__flexbox__text_area,
     .Marketing_section__page_01__flexbox__text_area,
     .Marketing_section__page_02__flexbox__text_area,
@@ -366,6 +555,13 @@ body {
       padding: 30px 20px 10px 20px;
       display: flex;
       flex-direction: column; }
+      @media (min-width: 1366px) {
+        .dochazka_section__page_01__flexbox__text_area, .dochazka_section__page_02__flexbox__text_area, .dochazka_section__page_03__flexbox__text_area, .HR_section__page_01__flexbox__text_area, .HR_section__page_02__flexbox__text_area, .HR_section__page_03__flexbox__text_area, .Rezervace_section__page_01__flexbox__text_area, .Rezervace_section__page_02__flexbox__text_area, .Rezervace_section__page_03__flexbox__text_area, .Operacni_section__page_01__flexbox__text_area, .Operacni_section__page_02__flexbox__text_area, .Operacni_section__page_03__flexbox__text_area,
+        .Marketing_section__page_01__flexbox__text_area,
+        .Marketing_section__page_02__flexbox__text_area,
+        .Marketing_section__page_03__flexbox__text_area, .Napiste_section__page_01__flexbox__text_area, .Napiste_section__page_02__flexbox__text_area, .Napiste_section__page_03__flexbox__text_area {
+          width: 100%;
+          padding-left: 0px; } }
       .dochazka_section__page_01__flexbox__text_area h3, .dochazka_section__page_02__flexbox__text_area h3, .dochazka_section__page_03__flexbox__text_area h3, .HR_section__page_01__flexbox__text_area h3, .HR_section__page_02__flexbox__text_area h3, .HR_section__page_03__flexbox__text_area h3, .Rezervace_section__page_01__flexbox__text_area h3, .Rezervace_section__page_02__flexbox__text_area h3, .Rezervace_section__page_03__flexbox__text_area h3, .Operacni_section__page_01__flexbox__text_area h3, .Operacni_section__page_02__flexbox__text_area h3, .Operacni_section__page_03__flexbox__text_area h3,
       .Marketing_section__page_01__flexbox__text_area h3,
       .Marketing_section__page_02__flexbox__text_area h3,
@@ -392,39 +588,88 @@ body {
         .Marketing_section__page_02__flexbox__text_area p:first-letter,
         .Marketing_section__page_03__flexbox__text_area p:first-letter, .Napiste_section__page_01__flexbox__text_area p:first-letter, .Napiste_section__page_02__flexbox__text_area p:first-letter, .Napiste_section__page_03__flexbox__text_area p:first-letter {
           text-transform: uppercase; }
-    .dochazka_section__page_01__flexbox img, .dochazka_section__page_02__flexbox img, .dochazka_section__page_03__flexbox img, .HR_section__page_01__flexbox img, .HR_section__page_02__flexbox img, .HR_section__page_03__flexbox img, .Rezervace_section__page_01__flexbox img, .Rezervace_section__page_02__flexbox img, .Rezervace_section__page_03__flexbox img, .Operacni_section__page_01__flexbox img, .Operacni_section__page_02__flexbox img, .Operacni_section__page_03__flexbox img,
-    .Marketing_section__page_01__flexbox img,
-    .Marketing_section__page_02__flexbox img,
-    .Marketing_section__page_03__flexbox img, .Napiste_section__page_01__flexbox img, .Napiste_section__page_02__flexbox img, .Napiste_section__page_03__flexbox img {
-      display: block;
-      width: auto;
-      height: 100%;
-      padding: 10px 0; }
-    .dochazka_section__page_01__flexbox #mockup-mackbook, .dochazka_section__page_02__flexbox #mockup-mackbook, .dochazka_section__page_03__flexbox #mockup-mackbook, .HR_section__page_01__flexbox #mockup-mackbook, .HR_section__page_02__flexbox #mockup-mackbook, .HR_section__page_03__flexbox #mockup-mackbook, .Rezervace_section__page_01__flexbox #mockup-mackbook, .Rezervace_section__page_02__flexbox #mockup-mackbook, .Rezervace_section__page_03__flexbox #mockup-mackbook, .Operacni_section__page_01__flexbox #mockup-mackbook, .Operacni_section__page_02__flexbox #mockup-mackbook, .Operacni_section__page_03__flexbox #mockup-mackbook,
-    .Marketing_section__page_01__flexbox #mockup-mackbook,
-    .Marketing_section__page_02__flexbox #mockup-mackbook,
-    .Marketing_section__page_03__flexbox #mockup-mackbook, .Napiste_section__page_01__flexbox #mockup-mackbook, .Napiste_section__page_02__flexbox #mockup-mackbook, .Napiste_section__page_03__flexbox #mockup-mackbook {
-      width: 100%;
-      max-width: 50%; }
+    .dochazka_section__page_01__flexbox__mockup, .dochazka_section__page_02__flexbox__mockup, .dochazka_section__page_03__flexbox__mockup, .HR_section__page_01__flexbox__mockup, .HR_section__page_02__flexbox__mockup, .HR_section__page_03__flexbox__mockup, .Rezervace_section__page_01__flexbox__mockup, .Rezervace_section__page_02__flexbox__mockup, .Rezervace_section__page_03__flexbox__mockup, .Operacni_section__page_01__flexbox__mockup, .Operacni_section__page_02__flexbox__mockup, .Operacni_section__page_03__flexbox__mockup,
+    .Marketing_section__page_01__flexbox__mockup,
+    .Marketing_section__page_02__flexbox__mockup,
+    .Marketing_section__page_03__flexbox__mockup, .Napiste_section__page_01__flexbox__mockup, .Napiste_section__page_02__flexbox__mockup, .Napiste_section__page_03__flexbox__mockup {
+      z-index: 200;
+      padding: 20px;
+      display: flex;
+      justify-content: center; }
+      .dochazka_section__page_01__flexbox__mockup img, .dochazka_section__page_02__flexbox__mockup img, .dochazka_section__page_03__flexbox__mockup img, .HR_section__page_01__flexbox__mockup img, .HR_section__page_02__flexbox__mockup img, .HR_section__page_03__flexbox__mockup img, .Rezervace_section__page_01__flexbox__mockup img, .Rezervace_section__page_02__flexbox__mockup img, .Rezervace_section__page_03__flexbox__mockup img, .Operacni_section__page_01__flexbox__mockup img, .Operacni_section__page_02__flexbox__mockup img, .Operacni_section__page_03__flexbox__mockup img,
+      .Marketing_section__page_01__flexbox__mockup img,
+      .Marketing_section__page_02__flexbox__mockup img,
+      .Marketing_section__page_03__flexbox__mockup img, .Napiste_section__page_01__flexbox__mockup img, .Napiste_section__page_02__flexbox__mockup img, .Napiste_section__page_03__flexbox__mockup img {
+        display: block;
+        height: 100%;
+        width: 100%; }
+      .dochazka_section__page_01__flexbox__mockup #mockup-mackbook, .dochazka_section__page_02__flexbox__mockup #mockup-mackbook, .dochazka_section__page_03__flexbox__mockup #mockup-mackbook, .HR_section__page_01__flexbox__mockup #mockup-mackbook, .HR_section__page_02__flexbox__mockup #mockup-mackbook, .HR_section__page_03__flexbox__mockup #mockup-mackbook, .Rezervace_section__page_01__flexbox__mockup #mockup-mackbook, .Rezervace_section__page_02__flexbox__mockup #mockup-mackbook, .Rezervace_section__page_03__flexbox__mockup #mockup-mackbook, .Operacni_section__page_01__flexbox__mockup #mockup-mackbook, .Operacni_section__page_02__flexbox__mockup #mockup-mackbook, .Operacni_section__page_03__flexbox__mockup #mockup-mackbook,
+      .Marketing_section__page_01__flexbox__mockup #mockup-mackbook,
+      .Marketing_section__page_02__flexbox__mockup #mockup-mackbook,
+      .Marketing_section__page_03__flexbox__mockup #mockup-mackbook, .Napiste_section__page_01__flexbox__mockup #mockup-mackbook, .Napiste_section__page_02__flexbox__mockup #mockup-mackbook, .Napiste_section__page_03__flexbox__mockup #mockup-mackbook {
+        width: 130%; }
+        @media (min-width: 768px) {
+          .dochazka_section__page_01__flexbox__mockup #mockup-mackbook, .dochazka_section__page_02__flexbox__mockup #mockup-mackbook, .dochazka_section__page_03__flexbox__mockup #mockup-mackbook, .HR_section__page_01__flexbox__mockup #mockup-mackbook, .HR_section__page_02__flexbox__mockup #mockup-mackbook, .HR_section__page_03__flexbox__mockup #mockup-mackbook, .Rezervace_section__page_01__flexbox__mockup #mockup-mackbook, .Rezervace_section__page_02__flexbox__mockup #mockup-mackbook, .Rezervace_section__page_03__flexbox__mockup #mockup-mackbook, .Operacni_section__page_01__flexbox__mockup #mockup-mackbook, .Operacni_section__page_02__flexbox__mockup #mockup-mackbook, .Operacni_section__page_03__flexbox__mockup #mockup-mackbook,
+          .Marketing_section__page_01__flexbox__mockup #mockup-mackbook,
+          .Marketing_section__page_02__flexbox__mockup #mockup-mackbook,
+          .Marketing_section__page_03__flexbox__mockup #mockup-mackbook, .Napiste_section__page_01__flexbox__mockup #mockup-mackbook, .Napiste_section__page_02__flexbox__mockup #mockup-mackbook, .Napiste_section__page_03__flexbox__mockup #mockup-mackbook {
+            width: 200%; } }
+@media (min-width: 1366px) {
+  .dochazka_section__page_01__flexbox, .HR_section__page_01__flexbox, .Rezervace_section__page_01__flexbox, .Operacni_section__page_01__flexbox,
+  .Marketing_section__page_01__flexbox, .Napiste_section__page_01__flexbox {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto 1fr;
+    align-items: flex-start; } }
+@media (min-width: 1366px) {
+  .dochazka_section__page_01__flexbox .section_title, .HR_section__page_01__flexbox .section_title, .Rezervace_section__page_01__flexbox .section_title, .Operacni_section__page_01__flexbox .section_title,
+  .Marketing_section__page_01__flexbox .section_title, .Napiste_section__page_01__flexbox .section_title {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    height: 100%; } }
+@media (min-width: 1366px) {
+  .dochazka_section__page_01__flexbox__text_area, .HR_section__page_01__flexbox__text_area, .Rezervace_section__page_01__flexbox__text_area, .Operacni_section__page_01__flexbox__text_area,
+  .Marketing_section__page_01__flexbox__text_area, .Napiste_section__page_01__flexbox__text_area {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    height: 100%;
+    margin-top: 30px; } }
+@media (min-width: 1366px) {
+  .dochazka_section__page_01__flexbox__mockup, .HR_section__page_01__flexbox__mockup, .Rezervace_section__page_01__flexbox__mockup, .Operacni_section__page_01__flexbox__mockup,
+  .Marketing_section__page_01__flexbox__mockup, .Napiste_section__page_01__flexbox__mockup {
+    grid-row: 1/3;
+    grid-column: 2/3;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; } }
+
+#mockup-mackbook_box {
+  width: 6000px; }
+  @media (min-width: 1366px) {
+    #mockup-mackbook_box {
+      width: 5000px; } }
 
 .section_title {
-  width: 150%;
+  width: 100%;
   position: relative;
-  padding-top: 20px; }
+  padding-top: 20px;
+  margin-left: -20px; }
+  @media (min-width: 1366px) {
+    .section_title {
+      width: 200%;
+      margin-left: -150px;
+      max-width: 1140px; } }
   .section_title__flexbox {
     display: flex; }
     .section_title__flexbox h2 {
-      margin-left: 30px;
-      font-family: 'andadabold';
-      font-size: 36px;
-      line-height: 54px;
-      letter-spacing: 0.72px;
-      color: #19336d;
       order: 2;
       z-index: 2;
       margin-left: -40px; }
       .section_title__flexbox h2:first-letter {
         text-transform: uppercase; }
+      @media (min-width: 1366px) {
+        .section_title__flexbox h2 {
+          margin-left: -100px; } }
     .section_title__flexbox__square {
       width: 40px;
       height: 40px;
@@ -435,11 +680,19 @@ body {
       transform-origin: top left;
       margin-left: 40px;
       z-index: 1; }
+      @media (min-width: 1366px) {
+        .section_title__flexbox__square {
+          width: 100px;
+          height: 100px;
+          margin-left: 100px; } }
   .section_title__span {
-    width: 100%;
+    width: 200%;
     height: 4px;
     margin-left: 10%;
     background: #19336d; }
+    @media (min-width: 1366px) {
+      .section_title__span {
+        margin-left: 10%; } }
 
 #dochazka_square {
   background: rgba(255, 255, 255, 0.35); }
@@ -456,30 +709,12 @@ body {
 #Operacni_square {
   background: rgba(25, 51, 109, 0.25); }
 
-h1 {
-  font-family: 'andadabold';
-  font-family: 'andadabold';
-  font-size: 48px;
-  line-height: 72px;
-  letter-spacing: 0.92px;
-  color: #19336d; }
+@media (min-width: 1366px) {
+  #napiste_nam_section_title {
+    top: 0; }
 
-h2 {
-  font-family: 'andadabold';
-  font-family: 'andadabold';
-  font-size: 36px;
-  line-height: 54px;
-  letter-spacing: 0.72px;
-  color: #19336d; }
-
-p {
-  font-size: 18px;
-  line-height: 27px;
-  font-weight: 400;
-  letter-spacing: 0.03em;
-  color: #19336d;
-  margin-left: 10px; }
-
+  .dochazka_section__page_02__flexbox__text_area, .HR_section__page_02__flexbox__text_area, .Rezervace_section__page_02__flexbox__text_area, .Operacni_section__page_02__flexbox__text_area {
+    order: 3; } }
 .background_color_box_first {
   width: 100%;
   height: 100%;
@@ -568,193 +803,98 @@ p {
       transform: rotate(45deg);
       transform-origin: top left; } }
 .footer {
+  position: relative;
   scroll-snap-align: start;
   scroll-snap-stop: always;
-  height: 1100px;
-  min-height: calc(100vh - 60px);
-  min-height: -moz-available;
-  min-height: -webkit-fill-available;
-  min-height: fill-available;
+  height: 1130px;
   width: 100%;
   background: #13313d;
   padding: 40px 30px; }
-  .footer__about__logo {
-    max-width: 350px; }
-  .footer__about__contact {
-    display: flex;
-    flex-direction: column;
-    margin: 25px 0 25px 0; }
-    .footer__about__contact a {
-      font-size: 20px;
-      line-height: 30px;
+  @media (min-width: 1024px) {
+    .footer {
+      height: 880px; } }
+  .footer__content {
+    max-width: 1140px;
+    margin-inline: auto; }
+    .footer__content__about__logo {
+      max-width: 350px; }
+    .footer__content__about__contact {
+      display: flex;
+      flex-direction: column;
+      margin: 25px 0 25px 0; }
+      .footer__content__about__contact a {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 400;
+        letter-spacing: 0.03em;
+        color: #19336d;
+        color: white;
+        padding: 4px 0;
+        text-decoration: none;
+        cursor: pointer; }
+    .footer__content__about__social svg {
+      width: 80px;
+      fill: white;
+      transition: all 0.2s ease-in-out; }
+    .footer__content__about__social #linkedin_icon_footer {
+      margin-left: 10px; }
+    .footer__content__links {
+      margin-top: 60px; }
+      @media (min-width: 1024px) {
+        .footer__content__links {
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%;
+          background: red; }
+          .footer__content__links:nth-last-child(1) {
+            margin-top: 20px !important;
+            background: green; } }
+      .footer__content__links__box {
+        margin-top: 20px; }
+        @media (min-width: 1024px) {
+          .footer__content__links__box {
+            width: 50%;
+            background: blue;
+            margin-top: 0px !important;
+            padding-right: 20px; }
+            .footer__content__links__box:nth-last-child(1) {
+              margin-top: 20px !important;
+              background: green; } }
+        .footer__content__links__box__title {
+          color: white;
+          margin-bottom: 5px;
+          text-transform: uppercase; }
+        .footer__content__links__box__span {
+          width: 80px;
+          height: 2px;
+          background: white;
+          margin-top: -5px; }
+        .footer__content__links__box__list {
+          list-style: none;
+          margin-top: 5px;
+          display: block; }
+          .footer__content__links__box__list li {
+            margin-top: 5px;
+            transition: all 0.2s ease-in-out; }
+            .footer__content__links__box__list li a {
+              text-decoration: none;
+              color: white;
+              margin-left: 10px;
+              display: inline-block; }
+              .footer__content__links__box__list li a:first-letter {
+                text-transform: uppercase; }
+    .footer__content__copyrights {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      margin-top: 30px;
+      font-size: 14px;
+      line-height: 21px;
       font-weight: 400;
       letter-spacing: 0.03em;
       color: #19336d;
-      color: white;
-      padding: 4px 0;
-      text-decoration: none;
-      cursor: pointer; }
-  .footer__about__social svg {
-    width: 80px;
-    fill: white;
-    transition: all 0.2s ease-in-out; }
-  .footer__about__social #linkedin_icon_footer {
-    margin-left: 10px; }
-  .footer__links {
-    margin-top: 60px; }
-    .footer__links__box {
-      margin-top: 20px; }
-      .footer__links__box__title {
-        font-family: 'andadabold';
-        font-size: 20px;
-        line-height: 30px;
-        letter-spacing: 0.3px;
-        /* adjusted */
-        color: #19336d;
-        color: white;
-        margin-bottom: 5px;
-        text-transform: uppercase; }
-      .footer__links__box__span {
-        width: 80px;
-        height: 2px;
-        background: white;
-        margin-top: -5px; }
-      .footer__links__box__list {
-        list-style: none;
-        margin-top: 5px;
-        display: block; }
-        .footer__links__box__list li {
-          margin-top: 5px;
-          transition: all 0.2s ease-in-out; }
-          .footer__links__box__list li a {
-            text-decoration: none;
-            font-size: 16px;
-            line-height: 24px;
-            font-weight: 400;
-            letter-spacing: 0.03em;
-            color: #19336d;
-            color: white;
-            margin-left: 10px;
-            display: inline-block; }
-            .footer__links__box__list li a:first-letter {
-              text-transform: uppercase; }
-  .footer__copyrights {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    margin-top: 30px;
-    font-size: 14px;
-    line-height: 21px;
-    font-weight: 400;
-    letter-spacing: 0.03em;
-    color: #19336d;
-    color: white; }
+      color: white; }
 
-@media only screen and (min-width: 321px) {
-  .hero_section__image_area__mockup {
-    display: none !important;
-    max-height: 400px !important; } }
-@media only screen and (min-width: 360px) {
-  .hero_section__image_area__mockup {
-    display: block !important; }
-
-  .hero_section__image_area__badges_box {
-    display: flex; }
-
-  .navigation li a {
-    padding: 0; }
-
-  .hero_section__image_area__mockup {
-    display: block; }
-
-  .download_section {
-    display: none; }
-
-  #mockup-mackbook {
-    width: 100%;
-    max-width: 100% !important; }
-
-  .dochazka_section__page_01, .dochazka_section__page_02, .dochazka_section__page_03, .HR_section__page_01, .HR_section__page_02, .HR_section__page_03, .Rezervace_section__page_01, .Rezervace_section__page_02, .Rezervace_section__page_03, .Operacni_section__page_01, .Operacni_section__page_02, .Operacni_section__page_03,
-  .Marketing_section__page_01,
-  .Marketing_section__page_02,
-  .Marketing_section__page_03, .Napiste_section__page_01, .Napiste_section__page_02, .Napiste_section__page_03 {
-    padding: 20px; }
-    .dochazka_section__page_01__flexbox, .dochazka_section__page_02__flexbox, .dochazka_section__page_03__flexbox, .HR_section__page_01__flexbox, .HR_section__page_02__flexbox, .HR_section__page_03__flexbox, .Rezervace_section__page_01__flexbox, .Rezervace_section__page_02__flexbox, .Rezervace_section__page_03__flexbox, .Operacni_section__page_01__flexbox, .Operacni_section__page_02__flexbox, .Operacni_section__page_03__flexbox,
-    .Marketing_section__page_01__flexbox,
-    .Marketing_section__page_02__flexbox,
-    .Marketing_section__page_03__flexbox, .Napiste_section__page_01__flexbox, .Napiste_section__page_02__flexbox, .Napiste_section__page_03__flexbox {
-      max-width: 650px;
-      margin: 0 auto; } }
-@media only screen and (min-width: 761px) {
-  .dochazka_section__page_01, .dochazka_section__page_02, .dochazka_section__page_03, .HR_section__page_01, .HR_section__page_02, .HR_section__page_03, .Rezervace_section__page_01, .Rezervace_section__page_02, .Rezervace_section__page_03, .Operacni_section__page_01, .Operacni_section__page_02, .Operacni_section__page_03,
-  .Marketing_section__page_01,
-  .Marketing_section__page_02,
-  .Marketing_section__page_03, .Napiste_section__page_01, .Napiste_section__page_02, .Napiste_section__page_03 {
-    padding: 30px; } }
-@media only screen and (min-width: 1366px) {
-  .hero_section {
-    margin: 0 auto;
-    max-width: 1140px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center; }
-    .hero_section__text_area {
-      max-width: 540px; }
-    .hero_section__image_area {
-      justify-content: center;
-      height: 100%; }
-    .hero_section__mockup {
-      max-height: 800px; }
-
-  .section_title {
-    top: 300px;
-    margin-left: 100px; }
-    .section_title__span {
-      margin-left: 10%; }
-
-  #napiste_nam_section_title {
-    top: 50px; }
-
-  .dochazka_section__page_01__flexbox, .dochazka_section__page_02__flexbox, .dochazka_section__page_03__flexbox, .HR_section__page_01__flexbox, .HR_section__page_02__flexbox, .HR_section__page_03__flexbox, .Rezervace_section__page_01__flexbox, .Rezervace_section__page_02__flexbox, .Rezervace_section__page_03__flexbox, .Operacni_section__page_01__flexbox, .Operacni_section__page_02__flexbox, .Operacni_section__page_03__flexbox,
-  .Marketing_section__page_01__flexbox,
-  .Marketing_section__page_02__flexbox,
-  .Marketing_section__page_03__flexbox, .Napiste_section__page_01__flexbox, .Napiste_section__page_02__flexbox, .Napiste_section__page_03__flexbox {
-    margin-inline: auto;
-    max-width: 1140px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center; }
-    .dochazka_section__page_01__flexbox__mockup, .dochazka_section__page_02__flexbox__mockup, .dochazka_section__page_03__flexbox__mockup, .HR_section__page_01__flexbox__mockup, .HR_section__page_02__flexbox__mockup, .HR_section__page_03__flexbox__mockup, .Rezervace_section__page_01__flexbox__mockup, .Rezervace_section__page_02__flexbox__mockup, .Rezervace_section__page_03__flexbox__mockup, .Operacni_section__page_01__flexbox__mockup, .Operacni_section__page_02__flexbox__mockup, .Operacni_section__page_03__flexbox__mockup,
-    .Marketing_section__page_01__flexbox__mockup,
-    .Marketing_section__page_02__flexbox__mockup,
-    .Marketing_section__page_03__flexbox__mockup, .Napiste_section__page_01__flexbox__mockup, .Napiste_section__page_02__flexbox__mockup, .Napiste_section__page_03__flexbox__mockup {
-      z-index: 200; } }
-/* 
-
-    Small screens, laptops 
-    769px - 1024px
-
-*/
-/* footer - 1st media query*/
-@media only screen and (min-width: 769px) {
-  .footer {
-    height: 880px; }
-    .footer__links {
-      display: flex;
-      flex-wrap: wrap;
-      width: 100%;
-      background: red; }
-      .footer__links__box {
-        width: 50%;
-        background: blue;
-        margin-top: 0px !important;
-        padding-right: 20px; }
-        .footer__links__box:nth-last-child(1) {
-          margin-top: 20px !important;
-          background: green; }
-      .footer__links:nth-last-child(1) {
-        margin-top: 20px !important;
-        background: green; } }
 .footer__links__box ul li:hover {
   padding-left: 5px; }
 
@@ -765,17 +905,9 @@ p {
 .footer__about__contact a:hover {
   letter-spacing: 0.7em; }
 
-html {
-  scroll-behavior: smooth;
-  min-height: 100vh;
-  min-height: -moz-available;
-  min-height: -webkit-fill-available;
-  min-height: fill-available; }
-
-body {
-  min-height: 100vh;
-  min-height: -moz-available;
-  min-height: -webkit-fill-available;
-  min-height: fill-available; }
+.header .nav .navigation li:hover::before {
+  margin-top: 0px;
+  opacity: 1;
+  z-index: -1; }
 
 /*# sourceMappingURL=stylesheet.css.map */

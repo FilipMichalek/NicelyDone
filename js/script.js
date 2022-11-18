@@ -94,8 +94,23 @@ function menuClose() {
   enable()  
 }
 
+// Contaner correct resize
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-  // IMAGES
+window.addEventListener('resize', () => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+})
+
+
+
+
+
+let imagesMaxInnerWidth = 1024 
+
+if (window.innerWidth < imagesMaxInnerWidth) {
+    // IMAGES
 let imageHeightLimit = 200
 let header = document.querySelector(".header")
 let headerHeight = header.offsetHeight
@@ -110,9 +125,9 @@ let heroMockup = document.querySelector(".hero_section__image_area__mockup")
 let heroBadges = document.querySelector(".hero_section__image_area__badges_box")
 let heroBadgesHeight = heroBadges.offsetHeight;
 
-heroTextSpace = heroTextAreaHeight + headerHeight
+  heroTextArea = heroTextAreaHeight + headerHeight
 
-heroImageArea.style.height = "calc(100% - " + heroTextSpace + "px)"
+heroImageArea.style.height = "calc(100% - " + heroTextArea + "px)"
 heroMockup.style.height = "calc(100% - " + heroBadgesHeight + "px)"
 
 if (heroImageArea.offsetHeight < imageHeightLimit) {
@@ -272,3 +287,20 @@ marketingMockup_page01.style.height = "calc(100% - " + marketingTextSpace_page01
 if (marketingMockup_page01.offsetHeight < imageHeightLimit) {
   marketingMockup_page01.style.display = "none"
 }
+}
+
+
+
+
+
+
+
+
+
+/*
+function anchorAlternative(){
+  let dochazka = document.querySelector(".dochazka_section")
+  dochazka.scrollIntoView()
+}
+*/
+
